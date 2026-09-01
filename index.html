@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>أكاديمية المهندس حسن بغدودة</title>
 
-    <!-- خط Cairo -->
+    <!-- الخط والأدوات -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap 5 RTL CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    
-    <!-- Font Awesome الأيقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         body {
@@ -23,27 +27,102 @@
             color: #1e293b;
         }
 
+        p {
+            line-height: 2;
+        }
+
+        /* Navbar */
         .bg-dark-custom {
             background-color: #0f172a !important;
         }
 
+        .navbar {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .navbar-brand {
+            margin-left: 30px;
+            padding: 8px 0;
+        }
+
+        .navbar-brand i {
+            font-size: 26px;
+        }
+
+        .navbar-nav .nav-link {
+            padding-right: 15px !important;
+            padding-left: 15px !important;
+        }
+
+        /* Hero */
         .hero-section {
             background-color: #0f172a;
             color: #ffffff;
-            padding: 70px 0;
+            padding: 90px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 46px;
+            line-height: 1.5;
+            margin-bottom: 25px !important;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            line-height: 2.1;
+            margin-bottom: 25px !important;
         }
 
         .badge-custom {
             border: 1px solid #ffc107;
             color: #ffc107;
-            padding: 6px 14px;
+            padding: 8px 18px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 22px;
         }
 
-        /* كروت الكورسات وآراء العملاء */
+        .hero-buttons {
+            margin-top: 10px;
+        }
+
+        .hero-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 22px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Sections */
+        section {
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+        }
+
+        .section-title {
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+        }
+
+        /* Cards */
         .card {
             border-radius: 12px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -51,15 +130,23 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
         }
 
         .card-icon {
             font-size: 2.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        /* قسم آراء العملاء */
+        .card-title {
+            margin-bottom: 18px;
+        }
+
+        .card-text {
+            line-height: 2;
+        }
+
+        /* Reviews */
         .testimonial-card {
             background-color: #ffffff;
             border: 1px solid #e2e8f0;
@@ -70,6 +157,12 @@
             font-size: 1.8rem;
             color: #ffc107;
             opacity: 0.4;
+        }
+
+        .testimonial-card .card-text {
+            font-size: 16px !important;
+            line-height: 2.1;
+            margin-bottom: 30px !important;
         }
 
         .avatar-icon {
@@ -84,20 +177,24 @@
             font-size: 1.2rem;
         }
 
-        /* فورم التواصل */
+        /* Contact */
         .contact-box {
             background-color: #1e293b;
             color: #ffffff;
             border-radius: 16px;
-            padding: 35px;
+            padding: 40px;
         }
 
-        /* الفوتر الاحترافي */
+        .contact-box p {
+            line-height: 2;
+        }
+
+        /* Footer */
         .footer-modern {
             background: #090d16;
             color: #94a3b8;
-            padding-top: 50px;
-            padding-bottom: 20px;
+            padding-top: 60px;
+            padding-bottom: 25px;
             border-top: 4px solid #0d6efd;
         }
 
@@ -105,8 +202,11 @@
             color: #ffffff;
             font-weight: 700;
             font-size: 1.15rem;
-            margin-bottom: 20px;
-            position: relative;
+            margin-bottom: 22px;
+        }
+
+        .footer-modern p {
+            line-height: 2;
         }
 
         .footer-links {
@@ -116,7 +216,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .footer-links a {
@@ -154,7 +254,7 @@
         .contact-info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             color: #cbd5e1;
         }
 
@@ -162,333 +262,785 @@
             width: 32px;
             color: #ffc107;
         }
+
+        /* Mobile */
+        @media (max-width: 767px) {
+            .navbar-brand {
+                margin-left: 10px;
+            }
+
+            .navbar-brand i {
+                font-size: 23px;
+            }
+
+            .hero-section {
+                padding: 60px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .hero-section p {
+                font-size: 16px;
+                line-height: 2;
+            }
+
+            .hero-image {
+                margin-top: 25px;
+                padding: 10px;
+            }
+
+            .hero-image img {
+                max-width: 320px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- 1. القائمة العلوية Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom sticky-top shadow-sm">
+
         <div class="container">
-            <a class="navbar-brand fw-bold fs-4" href="#">
-                <i class="fa-solid fa-code text-warning me-2"></i>Eng. <span class="text-primary">Hassan Baghdoda</span>
+
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-code text-warning"></i>
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
+
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
-                    <li class="nav-item"><a class="nav-link active" href="#hero">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#courses">الكورسات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reviews">آراء الطلاب</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">الحجز والتسجيل</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">
+                            الكورسات
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">
+                            آراء الطلاب
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            الحجز والتسجيل
+                        </a>
+                    </li>
+
                 </ul>
-                <a href="#contact" class="btn btn-warning fw-bold rounded-pill px-4">حجز بالمقر</a>
+
+                <a href="#contact"
+                    class="btn btn-warning fw-bold rounded-pill px-4">
+                    حجز بالمقر
+                </a>
+
             </div>
+
         </div>
+
     </nav>
 
-    <!-- 2. قسم الواجهة الرئيسية Hero Section -->
+    <!-- Hero -->
     <section id="hero" class="hero-section">
+
         <div class="container">
-            <div class="row align-items-center gy-4">
+
+            <div class="row align-items-center gy-5">
+
                 <div class="col-md-7 text-center text-md-start">
-                    <span class="badge-custom"><i class="fa-solid fa-location-dot me-1"></i> تعليم حضوري بالمقر المجهز</span>
-                    <h1 class="display-5 fw-bold mb-3">
-                        اصنع مستقبلك البرمجي <br>
-                        <span class="text-warning">مع المهندس حسن بغدودة</span>
+
+                    <span class="badge-custom">
+                        <i class="fa-solid fa-location-dot me-1"></i>
+                        تعليم حضوري بالمقر المجهز
+                    </span>
+
+                    <h1 class="display-5 fw-bold">
+
+                        اصنع مستقبلك البرمجي
+
+                        <br>
+
+                        <span class="text-warning">
+                            مع المهندس حسن بغدودة
+                        </span>
+
                     </h1>
-                    <p class="lead opacity-75 mb-4 fs-6">
-                        خبرة أكثر من 7 سنوات في كبرى الشركات البرمجية. بنقدم شرح حضوري مبسط لمناهج أولى وثانية ثانوي، وكورسات تفاعلية للأطفال والتأسيس البرمجي الشامل للمبتدئين والكبار.
+
+                    <p class="lead opacity-75">
+
+                        خبرة أكثر من 7 سنوات في كبرى الشركات البرمجية.
+                        بنقدم شرح حضوري مبسط لمناهج أولى وثانية ثانوي،
+                        وكورسات تفاعلية للأطفال والتأسيس البرمجي الشامل
+                        للمبتدئين والكبار.
+
                     </p>
-                    <div class="d-flex gap-2 justify-content-center justify-content-md-start">
-                        <a href="#contact" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">احجز مكانك بالمقر</a>
-                        <a href="#courses" class="btn btn-outline-light btn-lg rounded-pill px-4">استكشف الكورسات</a>
+
+                    <div class="hero-buttons">
+
+                        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+
+                            <a href="#contact"
+                                class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
+                                احجز مكانك بالمقر
+                            </a>
+
+                            <a href="#courses"
+                                class="btn btn-outline-light btn-lg rounded-pill px-4">
+                                استكشف الكورسات
+                            </a>
+
+                        </div>
+
                     </div>
+
                 </div>
 
                 <div class="col-md-5">
-                    <div class="card bg-dark text-white border-secondary text-center p-4">
-                        <div class="card-body">
-                            <i class="fa-solid fa-building-user fa-4x text-warning mb-3"></i>
-                            <h4 class="card-title fw-bold">تعلم مباشر داخل القاعات</h4>
-                            <p class="card-text text-light opacity-75">أطفال • طلاب ثانوي • كبار ومبتدئين</p>
-                        </div>
+
+                    <div class="hero-image">
+
+                        <img src="eng-hassan.png"
+                            alt="المهندس حسن بغدودة">
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- 3. قسم الكورسات -->
-    <section id="courses" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <span class="text-primary fw-bold">البرامج المتاحة</span>
-                <h2 class="fw-bold fs-1 mt-1">اختر المسار المناسب لك</h2>
-            </div>
+    <!-- Courses -->
+    <section id="courses">
 
-            <div class="row g-4">
-                <!-- كارت الأطفال -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm p-3">
-                        <div class="card-body text-center d-flex flex-column">
-                            <div class="card-icon text-warning"><i class="fa-solid fa-child-reaching"></i></div>
-                            <h4 class="card-title fw-bold">برمجة الأطفال</h4>
-                            <p class="card-text text-secondary mb-4">تعليم العقلية البرمجية وتنمية التفكير المنطقي بالألعاب التفاعلية داخل المقر.</p>
-                            <a href="#contact" class="btn btn-primary fw-bold mt-auto rounded-pill">احجز للأطفال</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- كارت الثانوي -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm p-3 border-primary">
-                        <div class="card-body text-center d-flex flex-column">
-                            <div class="card-icon text-primary"><i class="fa-solid fa-graduation-cap"></i></div>
-                            <h4 class="card-title fw-bold">أولى وثانية ثانوي</h4>
-                            <p class="card-text text-secondary mb-4">تغطية كاملة لمنهج المدرسة والامتحانات والتفوق بأسلوب عملي ومبسط بالمقر.</p>
-                            <a href="#contact" class="btn btn-primary fw-bold mt-auto rounded-pill">احجز للثانوي</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- كارت الكبار -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm p-3">
-                        <div class="card-body text-center d-flex flex-column">
-                            <div class="card-icon text-dark"><i class="fa-solid fa-laptop-code"></i></div>
-                            <h4 class="card-title fw-bold">برمجة الكبار</h4>
-                            <p class="card-text text-secondary mb-4">تأسيس محترف وشامل من الصفر لبناء موقعك الأول ومشاريع سوق العمل الحقيقية.</p>
-                            <a href="#contact" class="btn btn-primary fw-bold mt-auto rounded-pill">احجز للكبار</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. قسم آراء الطلاب وأولياء الأمور (كلام حقيقي وبدون أسماء) -->
-    <section id="reviews" class="py-5 bg-light">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <span class="text-primary fw-bold">آراء وتجارب</span>
-                <h2 class="fw-bold fs-1 mt-1">ماذا قالوا عن الشرح بالمقر؟</h2>
-            </div>
-
-            <div class="row g-4">
-                <!-- الرأي الأول -->
-                <div class="col-md-4">
-                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <i class="fa-solid fa-quote-left testimonial-icon"></i>
-                            </div>
-                            <p class="card-text text-secondary mb-4 fs-6">
-                                "بجد شكراً يا باشمهندس، المادة كانت تقيلة عليا جداً في المدرسة ومش فاهم منها حاجة، بس التطبيق العملي معاك في القاعة خلى الدنيا سهلة والامتحان عدى بامتياز."
-                            </p>
-                            <div class="d-flex align-items-center mt-auto pt-2 border-top">
-                                <div class="avatar-icon me-3"><i class="fa-solid fa-user-graduate"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-0 text-dark">طالب بالصف الثاني الثانوي</h6>
-                                    <small class="text-muted">كورس منهج المدرسة</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- الرأي الثاني -->
-                <div class="col-md-4">
-                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <i class="fa-solid fa-quote-left testimonial-icon"></i>
-                            </div>
-                            <p class="card-text text-secondary mb-4 fs-6">
-                                "فرق كبير جداً في طريقة تفكير ابني من يوم ما بدأ معاكم.. بقى حابب الشغف والكمبيوتر وبيدور بنفسه يفهم المشاكل ويحلها. طريقتكم مع الأطفال ممتازة."
-                            </p>
-                            <div class="d-flex align-items-center mt-auto pt-2 border-top">
-                                <div class="avatar-icon me-3"><i class="fa-solid fa-user"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-0 text-dark">ولي أمر طالب</h6>
-                                    <small class="text-muted">كورس برمجة الأطفال</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- الرأي الثالث -->
-                <div class="col-md-4">
-                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <i class="fa-solid fa-quote-left testimonial-icon"></i>
-                            </div>
-                            <p class="card-text text-secondary mb-4 fs-6">
-                                "كنت خايف ابدأ لأني ماليش أي خلفية عن البرمجة، بس الباشمهندس حسن بيمشي خطوة بخطوة وبيعيد لحد ما المعلومة تثبت. التأسيس حقيقي ومحترم."
-                            </p>
-                            <div class="d-flex align-items-center mt-auto pt-2 border-top">
-                                <div class="avatar-icon me-3"><i class="fa-solid fa-laptop-code"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-0 text-dark">متدرب بالمسار الشامل</h6>
-                                    <small class="text-muted">تأسيس البرمجة للكبار</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. (قسم الحجز والتسجيل) -->
-    <section id="contact" class="py-5">
-        <div class="container py-4">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="contact-box shadow">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold">احجز مكانك بالمقر الآن</h3>
-                            <p class="text-light opacity-75">سجل بياناتك وسيتم توجيهك للواتساب لتأكيد الحجز فوراً</p>
-                        </div>
-                        
-                        <form id="whatsappForm">
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">الاسم بالكامل</label>
-                                <input type="text" id="studentName" class="form-control form-control-lg fs-6" placeholder="أدخل اسمك" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">رقم الهاتف (واتساب)</label>
-                                <input type="tel" id="studentPhone" class="form-control form-control-lg fs-6" placeholder="01xxxxxxxxx" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">اختر المسار المطلوب</label>
-                                <select id="studentCourse" class="form-select form-select-lg fs-6" required>
-                                    <option value="" disabled selected>اختر الكورس...</option>
-                                    <option value="برمجة الأطفال">برمجة الأطفال</option>
-                                    <option value="أولى وثانية ثانوي">أولى وثانية ثانوي</option>
-                                    <option value="تأسيس الكبار والمبتدئين">تأسيس الكبار والمبتدئين</option>
-                                </select>
-                            </div>
-
-                            <button type="submit" class="btn btn-success btn-lg fw-bold w-100 rounded-pill mt-3 py-3">
-                                <i class="fa-brands fa-whatsapp me-2 fs-5"></i> إرسال الحجز عبر الواتساب
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. الفوتر-->
-    <footer class="footer-modern">
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-title">
-                        <i class="fa-solid fa-code text-warning me-2"></i>Eng. Hassan Baghdoda
-                    </h5>
-                    <p class="small text-light opacity-75 leading-relaxed">
-                        أكاديمية متخصصة في تقديم أحدث المناهج البرمجية والتأسيس العملي بأسلوب حضوري مبسط وممتع لكل الفئات العمرية مع المتابعة الفردية الدائمة داخل المقر.
-                    </p>
-                    <div class="mt-3">
-                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://wa.me/201000000000" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            <div class="text-center section-title">
+
+                <span class="text-primary fw-bold">
+                    البرامج المتاحة
+                </span>
+
+                <h2 class="fw-bold">
+                    اختر المسار المناسب لك
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm p-3">
+
+                        <div class="card-body text-center d-flex flex-column">
+
+                            <div class="card-icon text-warning">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+
+                            <h4 class="card-title fw-bold">
+                                برمجة الأطفال
+                            </h4>
+
+                            <p class="card-text text-secondary mb-4">
+                                تعليم العقلية البرمجية وتنمية التفكير
+                                المنطقي بالألعاب التفاعلية داخل المقر.
+                            </p>
+
+                            <a href="#contact"
+                                class="btn btn-primary fw-bold mt-auto rounded-pill">
+                                احجز للأطفال
+                            </a>
+
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm p-3">
+
+                        <div class="card-body text-center d-flex flex-column">
+
+                            <div class="card-icon text-primary">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+
+                            <h4 class="card-title fw-bold">
+                                أولى وثانية ثانوي
+                            </h4>
+
+                            <p class="card-text text-secondary mb-4">
+                                تغطية كاملة لمنهج المدرسة والامتحانات
+                                والتفوق بأسلوب عملي ومبسط بالمقر.
+                            </p>
+
+                            <a href="#contact"
+                                class="btn btn-primary fw-bold mt-auto rounded-pill">
+                                احجز للثانوي
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm p-3">
+
+                        <div class="card-body text-center d-flex flex-column">
+
+                            <div class="card-icon text-dark">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+
+                            <h4 class="card-title fw-bold">
+                                برمجة الكبار
+                            </h4>
+
+                            <p class="card-text text-secondary mb-4">
+                                تأسيس محترف وشامل من الصفر لبناء موقعك
+                                الأول ومشاريع سوق العمل الحقيقية.
+                            </p>
+
+                            <a href="#contact"
+                                class="btn btn-primary fw-bold mt-auto rounded-pill">
+                                احجز للكبار
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="bg-light">
+
+        <div class="container">
+
+            <div class="text-center section-title">
+
+                <span class="text-primary fw-bold">
+                    آراء وتجارب
+                </span>
+
+                <h2 class="fw-bold">
+                    ماذا قالوا عن الشرح بالمقر؟
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <div class="text-warning">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+
+                                <i class="fa-solid fa-quote-left testimonial-icon"></i>
+
+                            </div>
+
+                            <p class="card-text text-secondary">
+                                "بجد شكراً يا باشمهندس، المادة كانت تقيلة
+                                عليا جداً في المدرسة ومش فاهم منها حاجة،
+                                بس التطبيق العملي معاك في القاعة خلى الدنيا
+                                سهلة والامتحان عدى بامتياز."
+                            </p>
+
+                            <div class="d-flex align-items-center mt-auto pt-3 border-top">
+
+                                <div class="avatar-icon me-3">
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                </div>
+
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">
+                                        طالب بالصف الثاني الثانوي
+                                    </h6>
+
+                                    <small class="text-muted">
+                                        كورس منهج المدرسة
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <div class="text-warning">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+
+                                <i class="fa-solid fa-quote-left testimonial-icon"></i>
+
+                            </div>
+
+                            <p class="card-text text-secondary">
+                                "فرق كبير جداً في طريقة تفكير ابني من يوم
+                                ما بدأ معاكم.. بقى حابب الشغف والكمبيوتر
+                                وبيدور بنفسه يفهم المشاكل ويحلها.
+                                طريقتكم مع الأطفال ممتازة."
+                            </p>
+
+                            <div class="d-flex align-items-center mt-auto pt-3 border-top">
+
+                                <div class="avatar-icon me-3">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">
+                                        ولي أمر طالب
+                                    </h6>
+
+                                    <small class="text-muted">
+                                        كورس برمجة الأطفال
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <div class="text-warning">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+
+                                <i class="fa-solid fa-quote-left testimonial-icon"></i>
+
+                            </div>
+
+                            <p class="card-text text-secondary">
+                                "كنت خايف ابدأ لأني ماليش أي خلفية عن
+                                البرمجة، بس الباشمهندس حسن بيمشي خطوة
+                                بخطوة وبيعيد لحد ما المعلومة تثبت.
+                                التأسيس حقيقي ومحترم."
+                            </p>
+
+                            <div class="d-flex align-items-center mt-auto pt-3 border-top">
+
+                                <div class="avatar-icon me-3">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">
+                                        متدرب بالمسار الشامل
+                                    </h6>
+
+                                    <small class="text-muted">
+                                        تأسيس البرمجة للكبار
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+
+                    <div class="contact-box shadow">
+
+                        <div class="text-center mb-4">
+
+                            <h3 class="fw-bold">
+                                احجز مكانك بالمقر الآن
+                            </h3>
+
+                            <p class="text-light opacity-75">
+                                سجل بياناتك وسيتم توجيهك للواتساب
+                                لتأكيد الحجز فوراً
+                            </p>
+
+                        </div>
+
+                        <form id="whatsappForm">
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-bold">
+                                    الاسم بالكامل
+                                </label>
+
+                                <input type="text"
+                                    id="studentName"
+                                    class="form-control form-control-lg fs-6"
+                                    placeholder="أدخل اسمك"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-bold">
+                                    رقم الهاتف (واتساب)
+                                </label>
+
+                                <input type="tel"
+                                    id="studentPhone"
+                                    class="form-control form-control-lg fs-6"
+                                    placeholder="01xxxxxxxxx"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-bold">
+                                    اختر المسار المطلوب
+                                </label>
+
+                                <select id="studentCourse"
+                                    class="form-select form-select-lg fs-6"
+                                    required>
+
+                                    <option value="" disabled selected>
+                                        اختر الكورس...
+                                    </option>
+
+                                    <option value="برمجة الأطفال">
+                                        برمجة الأطفال
+                                    </option>
+
+                                    <option value="أولى وثانية ثانوي">
+                                        أولى وثانية ثانوي
+                                    </option>
+
+                                    <option value="تأسيس الكبار والمبتدئين">
+                                        تأسيس الكبار والمبتدئين
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-success btn-lg fw-bold w-100 rounded-pill mt-3 py-3">
+
+                                <i class="fa-brands fa-whatsapp me-2 fs-5"></i>
+
+                                إرسال الحجز عبر الواتساب
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h5 class="footer-title">
+
+                        <i class="fa-solid fa-code text-warning me-2"></i>
+
+                        Eng. Hassan Baghdoda
+
+                    </h5>
+
+                    <p class="small text-light opacity-75">
+
+                        أكاديمية متخصصة في تقديم أحدث المناهج
+                        البرمجية والتأسيس العملي بأسلوب حضوري
+                        مبسط وممتع لكل الفئات العمرية مع المتابعة
+                        الفردية الدائمة داخل المقر.
+
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a href="https://www.facebook.com/profile.php?id=61586512111019"
+                            class="social-icon">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="https://wa.me/201019472905"
+                            target="_blank"
+                            class="social-icon">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-title">روابط سريعة</h5>
+
+                    <h5 class="footer-title">
+                        روابط سريعة
+                    </h5>
+
                     <ul class="footer-links small">
-                        <li><a href="#hero"><i class="fa-solid fa-chevron-left text-primary me-2"></i>الصفحة الرئيسية</a></li>
-                        <li><a href="#courses"><i class="fa-solid fa-chevron-left text-primary me-2"></i>المسارات المتاحة</a></li>
-                        <li><a href="#reviews"><i class="fa-solid fa-chevron-left text-primary me-2"></i>آراء الطلاب</a></li>
-                        <li><a href="#contact"><i class="fa-solid fa-chevron-left text-primary me-2"></i>حجز مكان بالمقر</a></li>
+
+                        <li>
+                            <a href="#hero">
+                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
+                                الصفحة الرئيسية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#courses">
+                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
+                                المسارات المتاحة
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#reviews">
+                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
+                                آراء الطلاب
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
+                                حجز مكان بالمقر
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                    <h5 class="footer-title">معلومات المقر والتواصل</h5>
+
+                    <h5 class="footer-title">
+                        معلومات المقر والتواصل
+                    </h5>
+
                     <div class="contact-info-item small">
+
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>المقر الرئيسي المجهز للتدريب الحضوري</span>
+
+                        <span>
+                            المقر الرئيسي المجهز للتدريب الحضوري
+                        </span>
+
                     </div>
+
                     <div class="contact-info-item small">
+
                         <i class="fa-solid fa-phone"></i>
-                        <span>واتساب والتواصل: 01000000000</span>
+
+                        <span>
+                            واتساب والتواصل: 01000000000
+                        </span>
+
                     </div>
+
                     <div class="contact-info-item small">
+
                         <i class="fa-solid fa-clock"></i>
-                        <span>مواعيد العمل: طوال أيام الأسبوع</span>
+
+                        <span>
+                            مواعيد العمل: طوال أيام الأسبوع
+                        </span>
+
                     </div>
+
                 </div>
+
             </div>
 
-            <hr class="border-secondary my-4 opacity-25">
+            <hr class="border-secondary my-5 opacity-25">
 
             <div class="row align-items-center copyright text-center text-md-start small">
+
                 <div class="col-md-6 mb-2 mb-md-0 text-light opacity-50">
-                    جميع الحقوق محفوظة &copy; 2026 لأكاديمية Eng. Hassan Baghdoda
+
+                    جميع الحقوق محفوظة &copy; 2026
+                    لأكاديمية Eng. Hassan Baghdoda
+
                 </div>
+
                 <div class="col-md-6 text-md-end text-light opacity-50">
+
                     تصميم وتطوير بكل حب ❤️
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- كود إرسال البيانات للواتساب -->
+    <!-- WhatsApp -->
     <script>
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        document
+            .getElementById('whatsappForm')
+            .addEventListener('submit', function (e) {
 
-            var phoneNumber = "201019472905"; 
+                e.preventDefault();
 
-            var name = document.getElementById('studentName').value;
-            var phone = document.getElementById('studentPhone').value;
-            var course = document.getElementById('studentCourse').value;
+                var phoneNumber = "201019472905";
 
-            var message = "السلام عليكم ورحمة الله وبركاته، أرغب في الحجز بالمقر مع الباشمهندس حسن.%0A%0A" +
-                          "📌 *الاسم:* " + encodeURIComponent(name) + "%0A" +
-                          "📞 *رقم الهاتف:* " + encodeURIComponent(phone) + "%0A" +
-                          "📚 *المسار المطلوب:* " + encodeURIComponent(course);
+                var name =
+                    document.getElementById('studentName').value;
 
-            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+                var phone =
+                    document.getElementById('studentPhone').value;
 
-            window.open(whatsappUrl, '_blank');
-        });
+                var course =
+                    document.getElementById('studentCourse').value;
+
+                var message =
+                    "السلام عليكم ورحمة الله وبركاته، أرغب في الحجز بالمقر مع الباشمهندس حسن.%0A%0A" +
+
+                    "📌 *الاسم:* " +
+                    encodeURIComponent(name) +
+                    "%0A" +
+
+                    "📞 *رقم الهاتف:* " +
+                    encodeURIComponent(phone) +
+                    "%0A" +
+
+                    "📚 *المسار المطلوب:* " +
+                    encodeURIComponent(course);
+
+                var whatsappUrl =
+                    "https://wa.me/" +
+                    phoneNumber +
+                    "?text=" +
+                    message;
+
+                window.open(whatsappUrl, '_blank');
+
+            });
     </script>
+
 </body>
+
 </html>
