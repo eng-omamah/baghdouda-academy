@@ -303,6 +303,754 @@
                 padding: 25px;
             }
         }
+        /* =========================
+   Learning Tracks
+   ========================= */
+
+.learning-track-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf4;
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.06);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* خط لامع بيعدي على الكارت */
+
+.learning-track-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.18),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    pointer-events: none;
+
+    transition: left 0.8s ease;
+}
+
+
+.learning-track-card:hover::before {
+    left: 150%;
+}
+
+
+.learning-track-card:hover {
+    transform: translateY(-9px);
+
+    border-color: #d7e1ee;
+
+    box-shadow:
+        0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.learning-track-top {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    min-height: 190px;
+
+    padding: 38px 36px;
+
+    color: #ffffff;
+}
+
+
+.kids-track .learning-track-top {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(59,130,246,0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1d4ed8
+        );
+}
+
+
+.school-track .learning-track-top {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(148,163,184,0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #334155
+        );
+}
+
+
+/* =====================================================
+   ICON
+   ===================================================== */
+
+.learning-track-icon {
+    width: 70px;
+    height: 70px;
+
+    min-width: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 21px;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    color: #ffc107;
+
+    font-size: 28px;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.4s cubic-bezier(.2,.8,.2,1),
+        background 0.4s ease;
+}
+
+
+.learning-track-card:hover .learning-track-icon {
+    transform:
+        translateY(-4px)
+        rotate(-4deg)
+        scale(1.06);
+
+    background: rgba(255,255,255,0.18);
+}
+
+
+/* =====================================================
+   HEADER TEXT
+   ===================================================== */
+
+.track-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    padding: 5px 10px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.09);
+
+    color: #ffc107;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+
+.learning-track-top h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.learning-track-top p {
+    max-width: 520px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,.76);
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.learning-track-body {
+    padding: 38px 36px 36px;
+}
+
+
+/* =====================================================
+   CHILDREN STEPS
+   ===================================================== */
+
+.learning-step {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 5px 0;
+
+    cursor: pointer;
+}
+
+
+.learning-step-number {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-shadow:
+        inset 0 0 0 1px #dbeafe;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+}
+
+
+.learning-step:hover .learning-step-number {
+    transform: translateY(-3px) scale(1.05);
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+.learning-step-content {
+    flex: 1;
+
+    padding-top: 2px;
+}
+
+
+.learning-step-content span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.learning-step-content h4 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    transition: color .3s ease;
+}
+
+
+.learning-step:hover h4 {
+    color: #2563eb;
+}
+
+
+.learning-step-content p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   CONNECTOR
+   ===================================================== */
+
+.learning-connector {
+    width: 2px;
+
+    height: 40px;
+
+    margin:
+        6px 0
+        6px 24px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #dbe3ee,
+            #eef2f7
+        );
+}
+
+
+/* =====================================================
+   FUTURE STAGES
+   ===================================================== */
+
+.coming-stage {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+    padding: 14px 18px;
+
+    border:
+        1px dashed
+        #d8e0ea;
+
+    border-radius: 15px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    cursor: default;
+}
+
+
+.coming-stage i {
+    color: #f59e0b;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   SCHOOL SUBJECTS
+   ===================================================== */
+
+.subject-row {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border:
+        1px solid
+        #e8edf4;
+
+    border-radius: 19px;
+
+    background: #fcfdff;
+
+    cursor: pointer;
+
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+
+.subject-row + .subject-row {
+    margin-top: 18px;
+}
+
+
+.subject-row:hover {
+    transform: translateY(-5px);
+
+    border-color: #cbd8e8;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(15,23,42,.07);
+}
+
+
+.subject-row-icon {
+    width: 54px;
+    height: 54px;
+
+    min-width: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 20px;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+
+.subject-row:hover .subject-row-icon {
+    transform:
+        scale(1.08)
+        rotate(-4deg);
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+.subject-row-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.subject-row-title {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 9px;
+}
+
+
+.subject-row-title h4 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    transition: color .3s ease;
+}
+
+
+.subject-row:hover .subject-row-title h4 {
+    color: #2563eb;
+}
+
+
+.subject-row-title span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 30px;
+
+    background: #fff8e6;
+
+    color: #9a6700;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.subject-row-content p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   INFO
+   ===================================================== */
+
+.subjects-note {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 22px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+.subjects-note i {
+    margin: 0;
+
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+
+.learning-track-button {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 28px;
+
+    padding: 15px 20px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.learning-track-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left .6s ease;
+}
+
+
+.learning-track-button:hover::before {
+    left: 140%;
+}
+
+
+.learning-track-button:hover {
+    transform: translateY(-3px);
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(37,99,235,.22);
+}
+
+
+.learning-track-button i {
+    transition: transform .3s ease;
+}
+
+
+.learning-track-button:hover i {
+    transform: translateX(-5px);
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    .learning-track-top {
+        min-height: auto;
+
+        padding: 30px 24px;
+
+        gap: 16px;
+    }
+
+
+    .learning-track-icon {
+        width: 56px;
+        height: 56px;
+
+        min-width: 56px;
+
+        font-size: 22px;
+    }
+
+
+    .learning-track-top h3 {
+        font-size: 23px;
+    }
+
+
+    .learning-track-top p {
+        font-size: 13px;
+    }
+
+
+    .learning-track-body {
+        padding: 30px 24px 26px;
+    }
+
+
+    .learning-step {
+        gap: 15px;
+    }
+
+
+    .learning-step-number {
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+    }
+
+
+    .subject-row {
+        padding: 18px;
+
+        gap: 14px;
+    }
+
+
+    .subject-row-icon {
+        width: 47px;
+        height: 47px;
+
+        min-width: 47px;
+    }
+
+}
     </style>
 </head>
 
@@ -433,126 +1181,307 @@
 
                 </div>
 
+   
             </div>
-
         </div>
-
     </section>
-
     <!-- Courses -->
-    <section id="courses">
 
-        <div class="container">
+<section id="courses">
 
-            <div class="text-center section-title">
+    <div class="container">
 
-                <span class="text-primary fw-bold">
-                    البرامج المتاحة
-                </span>
+        <div class="text-center section-title">
 
-                <h2 class="fw-bold">
-                    اختر المسار المناسب لك
-                </h2>
+            <span class="text-primary fw-bold">
+                المسارات التعليمية
+            </span>
 
-            </div>
+            <h2 class="fw-bold">
+                اختار المسار المناسب لك
+            </h2>
 
-            <div class="row g-4">
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm p-3">
-
-                        <div class="card-body text-center d-flex flex-column">
-
-                            <div class="card-icon text-warning">
-                                <i class="fa-solid fa-child-reaching"></i>
-                            </div>
-
-                            <h4 class="card-title fw-bold">
-                                برمجة الأطفال
-                            </h4>
-
-                            <p class="card-text text-secondary mb-4">
-                                تعليم العقلية البرمجية وتنمية التفكير
-                                المنطقي بالألعاب التفاعلية داخل المقر.
-                            </p>
-
-                            <a href="#contact"
-                                class="btn btn-primary fw-bold mt-auto rounded-pill">
-                                احجز للأطفال
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm p-3">
-
-                        <div class="card-body text-center d-flex flex-column">
-
-                            <div class="card-icon text-primary">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-
-                            <h4 class="card-title fw-bold">
-                                أولى وثانية ثانوي
-                            </h4>
-
-                            <p class="card-text text-secondary mb-4">
-                                تغطية كاملة لمنهج المدرسة والامتحانات
-                                والتفوق بأسلوب عملي ومبسط بالمقر.
-                            </p>
-
-                            <a href="#contact"
-                                class="btn btn-primary fw-bold mt-auto rounded-pill">
-                                احجز للثانوي
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm p-3">
-
-                        <div class="card-body text-center d-flex flex-column">
-
-                            <div class="card-icon text-dark">
-                                <i class="fa-solid fa-laptop-code"></i>
-                            </div>
-
-                            <h4 class="card-title fw-bold">
-                                برمجة الكبار
-                            </h4>
-
-                            <p class="card-text text-secondary mb-4">
-                                تأسيس محترف وشامل من الصفر لبناء موقعك
-                                الأول ومشاريع سوق العمل الحقيقية.
-                            </p>
-
-                            <a href="#contact"
-                                class="btn btn-primary fw-bold mt-auto rounded-pill">
-                                احجز للكبار
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <p class="text-secondary mt-3">
+                اختار المسار المناسب حسب العمر أو المرحلة الدراسية.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="row g-4">
+
+
+            <!-- مسار الأطفال -->
+
+            <div class="col-lg-6">
+
+                <div class="learning-track-card kids-track">
+
+                    <div class="learning-track-top">
+
+                        <div class="learning-track-icon">
+
+                            <i class="fa-solid fa-child-reaching"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="track-label">
+                                مسار 01
+                            </span>
+
+                            <h3>
+                                مسار الأطفال
+                            </h3>
+
+                            <p>
+                                رحلة متدرجة تبدأ من أساسيات الكمبيوتر
+                                وتوصل الطفل لعالم البرمجة.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-track-body">
+
+
+                        <!-- المرحلة الأولى -->
+
+                        <div class="learning-step">
+
+                            <div class="learning-step-number">
+                                01
+                            </div>
+
+
+                            <div class="learning-step-content">
+
+                                <span>
+                                    المرحلة الأولى
+                                </span>
+
+                                <h4>
+                                    أساسيات الكمبيوتر
+                                </h4>
+
+                                <p>
+                                    التعرف على الكمبيوتر ومكوناته
+                                    وطريقة استخدامه، مع بناء المهارات
+                                    الأساسية اللازمة للمراحل التالية.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="learning-connector"></div>
+
+
+                        <!-- المرحلة الثانية -->
+
+                        <div class="learning-step">
+
+                            <div class="learning-step-number">
+                                02
+                            </div>
+
+
+                            <div class="learning-step-content">
+
+                                <span>
+                                    المرحلة الثانية
+                                </span>
+
+                                <h4>
+                                    أساسيات البرمجة
+                                </h4>
+
+                                <p>
+                                    التعرف على التفكير البرمجي والمنطق
+                                    والأوامر والمفاهيم الأساسية
+                                    بطريقة مناسبة للأطفال.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="coming-stage">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            مراحل متقدمة سيتم إضافتها لاحقًا
+
+                        </div>
+
+
+                        <a href="#contact"
+                           class="learning-track-button">
+
+                            ابدأ مسار الأطفال
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- المواد الدراسية -->
+
+            <div class="col-lg-6">
+
+                <div class="learning-track-card school-track">
+
+                    <div class="learning-track-top">
+
+                        <div class="learning-track-icon">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="track-label">
+                                مسار 02
+                            </span>
+
+                            <h3>
+                                المواد الدراسية
+                            </h3>
+
+                            <p>
+                                محتوى دراسي منظم حسب المرحلة
+                                الدراسية والمادة المطلوبة.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-track-body">
+
+
+                        <!-- ICT -->
+
+                        <div class="subject-row">
+
+                            <div class="subject-row-icon">
+
+                                <i class="fa-solid fa-computer"></i>
+
+                            </div>
+
+
+                            <div class="subject-row-content">
+
+                                <div class="subject-row-title">
+
+                                    <h4>
+                                        ICT
+                                    </h4>
+
+                                    <span>
+                                        4 ابتدائي → 3 إعدادي
+                                    </span>
+
+                                </div>
+
+
+                                <p>
+                                    شرح منهج ICT بطريقة مبسطة
+                                    مع التركيز على الفهم والتطبيق
+                                    والاستعداد للامتحانات.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- البرمجة -->
+
+                        <div class="subject-row">
+
+                            <div class="subject-row-icon">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+
+                            <div class="subject-row-content">
+
+                                <div class="subject-row-title">
+
+                                    <h4>
+                                        البرمجة
+                                    </h4>
+
+                                    <span>
+                                        1 ثانوي → 2 ثانوي
+                                    </span>
+
+                                </div>
+
+
+                                <p>
+                                    شرح منهج البرمجة والتدريب
+                                    على حل الأسئلة والتطبيق العملي
+                                    خطوة بخطوة.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="subjects-note">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            اختار المادة والمرحلة المناسبة لك عند الحجز.
+
+                        </div>
+
+
+                        <a href="#contact"
+                           class="learning-track-button">
+
+                            اختر المادة الدراسية
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
 
     <!-- Reviews -->
     <section id="reviews" class="bg-light">
@@ -795,21 +1724,24 @@
                                 <select id="studentCourse"
                                     class="form-select form-select-lg fs-6"
                                     required>
-
                                     <option value="" disabled selected>
-                                        اختر الكورس...
+                                        اختر المسار أو المادة...
                                     </option>
 
-                                    <option value="برمجة الأطفال">
-                                        برمجة الأطفال
+                                    <option value="الأطفال - أساسيات الكمبيوتر">
+                                        الأطفال - أساسيات الكمبيوتر
                                     </option>
 
-                                    <option value="أولى وثانية ثانوي">
-                                        أولى وثانية ثانوي
+                                    <option value="الأطفال - أساسيات البرمجة">
+                                        الأطفال - أساسيات البرمجة
                                     </option>
 
-                                    <option value="تأسيس الكبار والمبتدئين">
-                                        تأسيس الكبار والمبتدئين
+                                    <option value="ICT - من 4 ابتدائي إلى 3 إعدادي">
+                                        ICT - من 4 ابتدائي إلى 3 إعدادي
+                                    </option>
+
+                                    <option value="البرمجة - أولى وثانية ثانوي">
+                                        البرمجة - أولى وثانية ثانوي
                                     </option>
 
                                 </select>
@@ -1044,3 +1976,6 @@
 </body>
 
 </html>
+
+        
+       
