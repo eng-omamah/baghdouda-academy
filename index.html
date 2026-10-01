@@ -1050,6 +1050,389 @@
         min-width: 47px;
     }
 
+}/* =====================================================
+   ACADEMY PATHS
+   ===================================================== */
+
+.academy-path-card {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 390px;
+
+    padding: 36px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+/* خلفية الأطفال */
+
+.kids-path {
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(59, 130, 246, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1d4ed8
+        );
+
+}
+
+
+/* خلفية المواد */
+
+.subjects-path {
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(148, 163, 184, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #111827,
+            #334155
+        );
+
+}
+
+
+/* Hover */
+
+.academy-path-card:hover {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 25px 55px rgba(15, 23, 42, 0.16);
+
+}
+
+
+/* =====================================================
+   TOP
+   ===================================================== */
+
+.path-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================================
+   ICON
+   ===================================================== */
+
+.path-icon {
+
+    width: 72px;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 21px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    color: #ffc107;
+
+    font-size: 29px;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+
+}
+
+
+.academy-path-card:hover .path-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-4deg)
+        scale(1.06);
+
+    background:
+        rgba(255, 255, 255, 0.19);
+
+}
+
+
+/* =====================================================
+   BADGE
+   ===================================================== */
+
+.path-badge {
+
+    padding:
+        7px 13px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.path-content {
+
+    flex: 1;
+
+}
+
+
+.path-content h3 {
+
+    margin:
+        0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+}
+
+
+.path-content p {
+
+    max-width: 540px;
+
+    margin:
+        0 0 25px;
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 14px;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================================
+   INFO
+   ===================================================== */
+
+.path-info {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.path-info span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        8px 12px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 11px;
+
+}
+
+
+.path-info i {
+
+    color: #ffc107;
+
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.path-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   ARROW
+   ===================================================== */
+
+.path-arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.academy-path-card:hover .path-arrow {
+
+    transform:
+        translateX(-5px);
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    .academy-path-card {
+
+        min-height: 350px;
+
+        padding: 27px;
+
+        border-radius: 23px;
+
+    }
+
+
+    .path-content h3 {
+
+        font-size: 25px;
+
+    }
+
+
+    .path-content p {
+
+        font-size: 13px;
+
+    }
+
+
+    .path-icon {
+
+        width: 62px;
+
+        height: 62px;
+
+        font-size: 25px;
+
+    }
+
 }
     </style>
 </head>
@@ -1187,9 +1570,13 @@
     </section>
     <!-- Courses -->
 
-<section id="courses">
+<!-- Courses -->
+
+<section id="courses" class="courses-section">
 
     <div class="container">
+
+        <!-- عنوان القسم -->
 
         <div class="text-center section-title">
 
@@ -1202,137 +1589,90 @@
             </h2>
 
             <p class="text-secondary mt-3">
-                اختار المسار المناسب حسب العمر أو المرحلة الدراسية.
+                مسارات تعليمية منظمة تساعدك تبدأ من المستوى المناسب
+                وتتطور خطوة بخطوة.
             </p>
 
         </div>
 
 
-        <div class="row g-4">
+        <!-- المسارات -->
+
+        <div class="row g-4 mt-4">
 
 
             <!-- مسار الأطفال -->
 
             <div class="col-lg-6">
 
-                <div class="learning-track-card kids-track">
+                <a
+                    href="kids.html"
+                    class="academy-path-card kids-path"
+                >
 
-                    <div class="learning-track-top">
+                    <div class="path-top">
 
-                        <div class="learning-track-icon">
+                        <div class="path-icon">
 
                             <i class="fa-solid fa-child-reaching"></i>
 
                         </div>
 
 
-                        <div>
+                        <div class="path-badge">
+                            المسار الأول
+                        </div>
 
-                            <span class="track-label">
-                                مسار 01
+                    </div>
+
+
+                    <div class="path-content">
+
+                        <h3>
+                            مسار الأطفال
+                        </h3>
+
+
+                        <p>
+                            رحلة تعليمية متدرجة تبدأ من أساسيات
+                            الكمبيوتر، ثم تنتقل إلى أساسيات البرمجة
+                            والتفكير المنطقي، مع مراحل إضافية يتم
+                            تطويرها تدريجيًا.
+                        </p>
+
+
+                        <div class="path-info">
+
+                            <span>
+                                <i class="fa-solid fa-layer-group"></i>
+                                مراحل متدرجة
                             </span>
 
-                            <h3>
-                                مسار الأطفال
-                            </h3>
-
-                            <p>
-                                رحلة متدرجة تبدأ من أساسيات الكمبيوتر
-                                وتوصل الطفل لعالم البرمجة.
-                            </p>
+                            <span>
+                                <i class="fa-solid fa-child"></i>
+                                مناسب للأطفال
+                            </span>
 
                         </div>
 
                     </div>
 
 
-                    <div class="learning-track-body">
+                    <div class="path-footer">
 
+                        <span>
+                            استكشف المسار
+                        </span>
 
-                        <!-- المرحلة الأولى -->
-
-                        <div class="learning-step">
-
-                            <div class="learning-step-number">
-                                01
-                            </div>
-
-
-                            <div class="learning-step-content">
-
-                                <span>
-                                    المرحلة الأولى
-                                </span>
-
-                                <h4>
-                                    أساسيات الكمبيوتر
-                                </h4>
-
-                                <p>
-                                    التعرف على الكمبيوتر ومكوناته
-                                    وطريقة استخدامه، مع بناء المهارات
-                                    الأساسية اللازمة للمراحل التالية.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="learning-connector"></div>
-
-
-                        <!-- المرحلة الثانية -->
-
-                        <div class="learning-step">
-
-                            <div class="learning-step-number">
-                                02
-                            </div>
-
-
-                            <div class="learning-step-content">
-
-                                <span>
-                                    المرحلة الثانية
-                                </span>
-
-                                <h4>
-                                    أساسيات البرمجة
-                                </h4>
-
-                                <p>
-                                    التعرف على التفكير البرمجي والمنطق
-                                    والأوامر والمفاهيم الأساسية
-                                    بطريقة مناسبة للأطفال.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="coming-stage">
-
-                            <i class="fa-solid fa-plus"></i>
-
-                            مراحل متقدمة سيتم إضافتها لاحقًا
-
-                        </div>
-
-
-                        <a href="#contact"
-                           class="learning-track-button">
-
-                            ابدأ مسار الأطفال
+                        <span class="path-arrow">
 
                             <i class="fa-solid fa-arrow-left"></i>
 
-                        </a>
+                        </span>
 
                     </div>
 
-                </div>
+                </a>
 
             </div>
 
@@ -1342,136 +1682,73 @@
 
             <div class="col-lg-6">
 
-                <div class="learning-track-card school-track">
+                <a
+                    href="subjects.html"
+                    class="academy-path-card subjects-path"
+                >
 
-                    <div class="learning-track-top">
+                    <div class="path-top">
 
-                        <div class="learning-track-icon">
+                        <div class="path-icon">
 
                             <i class="fa-solid fa-graduation-cap"></i>
 
                         </div>
 
 
-                        <div>
+                        <div class="path-badge">
+                            المسار الثاني
+                        </div>
 
-                            <span class="track-label">
-                                مسار 02
+                    </div>
+
+
+                    <div class="path-content">
+
+                        <h3>
+                            المواد الدراسية
+                        </h3>
+
+
+                        <p>
+                            مسارات دراسية منظمة حسب المرحلة والمادة،
+                            تساعد الطالب على فهم المحتوى والتدرب عليه
+                            والاستعداد بشكل أفضل.
+                        </p>
+
+
+                        <div class="path-info">
+
+                            <span>
+                                <i class="fa-solid fa-book"></i>
+                                مواد دراسية
                             </span>
 
-                            <h3>
-                                المواد الدراسية
-                            </h3>
-
-                            <p>
-                                محتوى دراسي منظم حسب المرحلة
-                                الدراسية والمادة المطلوبة.
-                            </p>
+                            <span>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                حسب المرحلة
+                            </span>
 
                         </div>
 
                     </div>
 
 
-                    <div class="learning-track-body">
+                    <div class="path-footer">
 
+                        <span>
+                            استكشف المسار
+                        </span>
 
-                        <!-- ICT -->
-
-                        <div class="subject-row">
-
-                            <div class="subject-row-icon">
-
-                                <i class="fa-solid fa-computer"></i>
-
-                            </div>
-
-
-                            <div class="subject-row-content">
-
-                                <div class="subject-row-title">
-
-                                    <h4>
-                                        ICT
-                                    </h4>
-
-                                    <span>
-                                        4 ابتدائي → 3 إعدادي
-                                    </span>
-
-                                </div>
-
-
-                                <p>
-                                    شرح منهج ICT بطريقة مبسطة
-                                    مع التركيز على الفهم والتطبيق
-                                    والاستعداد للامتحانات.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- البرمجة -->
-
-                        <div class="subject-row">
-
-                            <div class="subject-row-icon">
-
-                                <i class="fa-solid fa-code"></i>
-
-                            </div>
-
-
-                            <div class="subject-row-content">
-
-                                <div class="subject-row-title">
-
-                                    <h4>
-                                        البرمجة
-                                    </h4>
-
-                                    <span>
-                                        1 ثانوي → 2 ثانوي
-                                    </span>
-
-                                </div>
-
-
-                                <p>
-                                    شرح منهج البرمجة والتدريب
-                                    على حل الأسئلة والتطبيق العملي
-                                    خطوة بخطوة.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="subjects-note">
-
-                            <i class="fa-solid fa-circle-info"></i>
-
-                            اختار المادة والمرحلة المناسبة لك عند الحجز.
-
-                        </div>
-
-
-                        <a href="#contact"
-                           class="learning-track-button">
-
-                            اختر المادة الدراسية
+                        <span class="path-arrow">
 
                             <i class="fa-solid fa-arrow-left"></i>
 
-                        </a>
+                        </span>
 
                     </div>
 
-                </div>
+                </a>
 
             </div>
 
@@ -1481,8 +1758,6 @@
     </div>
 
 </section>
-
-
     <!-- Reviews -->
     <section id="reviews" class="bg-light">
 
@@ -1930,7 +2205,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- WhatsApp -->
-    <script>
+     <script>
         document
             .getElementById('whatsappForm')
             .addEventListener('submit', function (e) {
