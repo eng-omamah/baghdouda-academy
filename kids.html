@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مسار الأطفال | أكاديمية المهندس حسن بغدودة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Cairo", sans-serif;
+            background: #f8fafc;
+            color: #111827;
+            line-height: 2;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .kids-hero {
+            padding: 70px 0;
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(59, 130, 246, 0.35),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1d4ed8
+                );
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            margin-bottom: 30px;
+            padding: 9px 16px;
+
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 12px;
+
+            color: rgba(255,255,255,.9);
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: .3s ease;
+        }
+
+        .back-link:hover {
+            color: white;
+            background: rgba(255,255,255,.1);
+        }
+
+        .kids-hero-icon {
+            width: 72px;
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 22px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.16);
+
+            color: #ffc107;
+            font-size: 28px;
+        }
+
+        .kids-hero h1 {
+            margin: 0 0 15px;
+
+            color: white;
+
+            font-size: 42px;
+            font-weight: 800;
+
+            line-height: 1.5;
+        }
+
+        .kids-hero p {
+            max-width: 780px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,.78);
+
+            font-size: 16px;
+            line-height: 2.1;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .kids-content {
+            padding: 70px 0 90px;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .section-title h2 {
+            margin: 8px 0 12px;
+
+            color: #111827;
+
+            font-size: 31px;
+            font-weight: 800;
+
+            line-height: 1.6;
+        }
+
+        .section-title p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #64748b;
+
+            font-size: 15px;
+            line-height: 2.1;
+        }
+
+
+        /* =========================
+           STAGES
+        ========================= */
+
+        .stage {
+            max-width: 950px;
+
+            margin: 0 auto 35px;
+            padding: 35px;
+
+            background: white;
+
+            border: 1px solid #e5eaf1;
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(15,23,42,.05);
+        }
+
+        .stage-header {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+
+            margin-bottom: 22px;
+        }
+
+        .stage-number {
+            width: 60px;
+            height: 60px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 17px;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .stage-label {
+            display: block;
+
+            margin-bottom: 2px;
+
+            color: #2563eb;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .stage-title {
+            margin: 0;
+
+            color: #111827;
+
+            font-size: 25px;
+            font-weight: 800;
+
+            line-height: 1.6;
+        }
+
+        .stage-description {
+            margin: 0 0 28px;
+
+            color: #64748b;
+
+            font-size: 15px;
+
+            line-height: 2.2;
+        }
+
+
+        /* =========================
+           LESSONS
+        ========================= */
+
+        .content-title {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 18px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #edf1f5;
+
+            color: #111827;
+
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .content-title i {
+            color: #2563eb;
+        }
+
+        .topics {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 13px;
+
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .topic {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 11px;
+
+            padding: 15px 17px;
+
+            background: #f8fafc;
+
+            border: 1px solid #eef2f7;
+            border-radius: 15px;
+
+            color: #475569;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            transition: .3s ease;
+        }
+
+        .topic:hover {
+            background: #f1f5f9;
+
+            border-color: #dbeafe;
+
+            transform: translateY(-2px);
+        }
+
+        .topic i {
+            margin-top: 7px;
+
+            color: #2563eb;
+
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           COMING SOON
+        ========================= */
+
+        .coming-stage {
+            background: #f8fafc;
+
+            box-shadow: none;
+        }
+
+        .coming-stage:hover {
+            transform: none;
+        }
+
+        .coming-badge {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 5px;
+
+            padding: 7px 13px;
+
+            border-radius: 30px;
+
+            background: #e2e8f0;
+
+            color: #64748b;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .coming-text {
+            margin: 16px 0 0;
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+            line-height: 2;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .kids-hero {
+                padding: 55px 0;
+            }
+
+            .kids-hero h1 {
+                font-size: 32px;
+            }
+
+            .kids-hero p {
+                font-size: 14px;
+            }
+
+            .kids-content {
+                padding: 55px 0 70px;
+            }
+
+            .section-title h2 {
+                font-size: 26px;
+            }
+
+            .stage {
+                padding: 25px;
+            }
+
+            .stage-header {
+                align-items: flex-start;
+            }
+
+            .stage-number {
+                width: 50px;
+                height: 50px;
+
+                border-radius: 15px;
+            }
+
+            .stage-title {
+                font-size: 21px;
+            }
+
+            .stage-description {
+                font-size: 14px;
+            }
+
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            .topic {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header class="kids-hero">
+
+        <div class="container">
+
+            <a
+                href="index.html#courses"
+                class="back-link"
+            >
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                العودة للمسارات
+
+            </a>
+
+
+            <div class="kids-hero-icon">
+
+                <i class="fa-solid fa-child-reaching"></i>
+
+            </div>
+
+
+            <h1>
+                مسار الأطفال
+            </h1>
+
+
+            <p>
+
+                رحلة تعليمية متدرجة تبدأ من أساسيات الكمبيوتر،
+                ثم تنتقل إلى أساسيات البرمجة والتفكير المنطقي،
+                مع إضافة مراحل جديدة تدريجيًا.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENT
+    ========================= -->
+
+    <main class="kids-content">
+
+        <div class="container">
+
+
+            <div class="section-title text-center">
+
+                <span>
+                    رحلة التعلم
+                </span>
+
+                <h2>
+                    مراحل مسار الأطفال
+                </h2>
+
+                <p>
+
+                    كل مرحلة تبني مهارات جديدة على ما تعلمه الطفل
+                    في المرحلة السابقة، بحيث تكون رحلة التعلم
+                    واضحة ومنظمة من البداية.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 المرحلة الأولى
+            ========================= -->
+
+            <section class="stage">
+
+
+                <div class="stage-header">
+
+                    <div class="stage-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <span class="stage-label">
+                            المرحلة الأولى
+                        </span>
+
+                        <h3 class="stage-title">
+                            أساسيات الكمبيوتر
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <p class="stage-description">
+
+                    في هذه المرحلة يتعرف الطفل على الكمبيوتر
+                    وطريقة استخدامه بشكل صحيح، ويتعلم المهارات
+                    الأساسية التي يحتاجها في الدراسة والتعامل
+                    مع التكنولوجيا بشكل آمن وسهل.
+
+                </p>
+
+
+                <div class="content-title">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    محتوى المرحلة
+
+                </div>
+
+
+                <ul class="topics">
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على الكمبيوتر ومكوناته الأساسية.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على الشاشة ولوحة المفاتيح والماوس.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التدريب على استخدام لوحة المفاتيح.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التدريب على استخدام الماوس.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        إنشاء الملفات والمجلدات وتنظيمها.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        فتح البرامج واستخدامها بشكل صحيح.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على أساسيات الإنترنت.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        أساسيات الأمان والحماية أثناء استخدام الإنترنت.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تدريبات عملية على استخدام الكمبيوتر.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تطبيق المهارات من خلال أنشطة مناسبة للأطفال.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 المرحلة الثانية
+            ========================= -->
+
+            <section class="stage">
+
+
+                <div class="stage-header">
+
+                    <div class="stage-number">
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <span class="stage-label">
+                            المرحلة الثانية
+                        </span>
+
+                        <h3 class="stage-title">
+                            أساسيات البرمجة
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <p class="stage-description">
+
+                    بعد اكتساب أساسيات الكمبيوتر، يبدأ الطفل
+                    في التعرف على عالم البرمجة، ويتعلم طريقة
+                    التفكير المنطقي وترتيب الخطوات وتحويل
+                    الأفكار إلى أوامر يمكن للكمبيوتر تنفيذها.
+
+                </p>
+
+
+                <div class="content-title">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    محتوى المرحلة
+
+                </div>
+
+
+                <ul class="topics">
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على معنى البرمجة بطريقة بسيطة.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تنمية التفكير المنطقي لدى الطفل.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على الأوامر وترتيب خطوات تنفيذها.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        فهم فكرة المتغيرات بشكل مبسط.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على الشروط واتخاذ القرارات.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التعرف على التكرار والحلقات.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        حل المشكلات باستخدام التفكير البرمجي.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تنفيذ تدريبات برمجية بسيطة.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تطبيق المفاهيم من خلال أنشطة عملية.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تنفيذ مشروعات صغيرة مناسبة لعمر الطفل.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 المرحلة الثالثة
+            ========================= -->
+
+            <section class="stage coming-stage">
+
+
+                <div class="stage-header">
+
+                    <div class="stage-number">
+                        03
+                    </div>
+
+
+                    <div>
+
+                        <span class="stage-label">
+                            المرحلة الثالثة
+                        </span>
+
+                        <h3 class="stage-title">
+                            مرحلة متقدمة
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <span class="coming-badge">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    قريبًا
+
+                </span>
+
+
+                <p class="coming-text">
+
+                    سيتم إضافة محتوى المرحلة الثالثة لاحقًا
+                    ضمن تطوير مسار الأطفال.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 المرحلة الرابعة
+            ========================= -->
+
+            <section class="stage coming-stage">
+
+
+                <div class="stage-header">
+
+                    <div class="stage-number">
+                        04
+                    </div>
+
+
+                    <div>
+
+                        <span class="stage-label">
+                            المرحلة الرابعة
+                        </span>
+
+                        <h3 class="stage-title">
+                            مرحلة متقدمة
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <span class="coming-badge">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    قريبًا
+
+                </span>
+
+
+                <p class="coming-text">
+
+                    سيتم إضافة محتوى المرحلة الرابعة لاحقًا
+                    مع تطوير وإضافة مراحل جديدة للمسار.
+
+                </p>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
