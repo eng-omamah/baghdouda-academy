@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>المواد الدراسية | أكاديمية المهندس حسن بغدودة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Cairo", sans-serif;
+            background: #f8fafc;
+            color: #111827;
+            line-height: 2;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .subjects-hero {
+            padding: 70px 0;
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(148, 163, 184, 0.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #334155
+                );
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            margin-bottom: 30px;
+            padding: 9px 16px;
+
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 12px;
+
+            color: rgba(255,255,255,.9);
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: .3s ease;
+        }
+
+        .back-link:hover {
+            color: white;
+            background: rgba(255,255,255,.1);
+        }
+
+        .subjects-hero-icon {
+            width: 72px;
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 22px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.16);
+
+            color: #ffc107;
+            font-size: 28px;
+        }
+
+        .subjects-hero h1 {
+            margin: 0 0 15px;
+
+            color: white;
+
+            font-size: 42px;
+            font-weight: 800;
+
+            line-height: 1.5;
+        }
+
+        .subjects-hero p {
+            max-width: 780px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,.78);
+
+            font-size: 16px;
+            line-height: 2.1;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .subjects-content {
+            padding: 70px 0 90px;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .section-title h2 {
+            margin: 8px 0 12px;
+
+            color: #111827;
+
+            font-size: 31px;
+            font-weight: 800;
+
+            line-height: 1.6;
+        }
+
+        .section-title p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #64748b;
+
+            font-size: 15px;
+            line-height: 2.1;
+        }
+
+
+        /* =========================
+           SUBJECT CARD
+        ========================= */
+
+        .subject-card {
+            max-width: 950px;
+
+            margin: 0 auto 35px;
+            padding: 35px;
+
+            background: white;
+
+            border: 1px solid #e5eaf1;
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(15,23,42,.05);
+        }
+
+        .subject-header {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+
+            margin-bottom: 22px;
+        }
+
+        .subject-number {
+            width: 60px;
+            height: 60px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 17px;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .subject-label {
+            display: block;
+
+            margin-bottom: 2px;
+
+            color: #2563eb;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .subject-title {
+            margin: 0;
+
+            color: #111827;
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            line-height: 1.6;
+        }
+
+        .subject-description {
+            margin: 0 0 28px;
+
+            color: #64748b;
+
+            font-size: 15px;
+
+            line-height: 2.2;
+        }
+
+
+        /* =========================
+           TOPICS
+        ========================= */
+
+        .content-title {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 18px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #edf1f5;
+
+            color: #111827;
+
+            font-size: 18px;
+
+            font-weight: 800;
+        }
+
+        .content-title i {
+            color: #2563eb;
+        }
+
+        .topics {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 13px;
+
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .topic {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 11px;
+
+            padding: 15px 17px;
+
+            background: #f8fafc;
+
+            border: 1px solid #eef2f7;
+            border-radius: 15px;
+
+            color: #475569;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            transition: .3s ease;
+        }
+
+        .topic:hover {
+            background: #f1f5f9;
+
+            border-color: #dbeafe;
+
+            transform: translateY(-2px);
+        }
+
+        .topic i {
+            margin-top: 7px;
+
+            color: #2563eb;
+
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .subjects-hero {
+                padding: 55px 0;
+            }
+
+            .subjects-hero h1 {
+                font-size: 32px;
+            }
+
+            .subjects-hero p {
+                font-size: 14px;
+            }
+
+            .subjects-content {
+                padding: 55px 0 70px;
+            }
+
+            .section-title h2 {
+                font-size: 26px;
+            }
+
+            .subject-card {
+                padding: 25px;
+            }
+
+            .subject-header {
+                align-items: flex-start;
+            }
+
+            .subject-number {
+                width: 50px;
+                height: 50px;
+
+                border-radius: 15px;
+            }
+
+            .subject-title {
+                font-size: 21px;
+            }
+
+            .subject-description {
+                font-size: 14px;
+            }
+
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            .topic {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header class="subjects-hero">
+
+        <div class="container">
+
+            <a
+                href="index.html#courses"
+                class="back-link"
+            >
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                العودة للمسارات
+
+            </a>
+
+
+            <div class="subjects-hero-icon">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+
+            <h1>
+                المواد الدراسية
+            </h1>
+
+
+            <p>
+
+                مسارات دراسية منظمة ومبسطة للمراحل التعليمية المختلفة،
+                تشمل مناهج تكنولوجيا المعلومات والاتصالات (ICT)
+                ومناهج البرمجة لطلبة الثانوي لتسهيل الفهم والتدريب العملي.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENT
+    ========================= -->
+
+    <main class="subjects-content">
+
+        <div class="container">
+
+
+            <div class="section-title text-center">
+
+                <span>
+                    المناهج الدراسية
+                </span>
+
+                <h2>
+                    المسارات والمواد المتاحة
+                </h2>
+
+                <p>
+
+                    شرح تفصيلي وتطبيق عملي لكل المناهج الدراسية
+                    لمساعدة الطلاب على التفوق والنجاح بامتياز.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 المادة الأولى: ICT
+            ========================= -->
+
+            <section class="subject-card">
+
+
+                <div class="subject-header">
+
+                    <div class="subject-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <span class="subject-label">
+                            المسار الأول للمواد
+                        </span>
+
+                        <h3 class="subject-title">
+                            مادة تكنولوجيا المعلومات والاتصالات (ICT)
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <p class="subject-description">
+                    مناهج تكنولوجيا المعلومات والاتصالات المخصصة للمراحل التعليمية من رابعة ابتدائي وحتى ثالثة إعدادي، بأسلوب مبسط وتطبيقات عملية تسهل استيعاب المفاهيم التقنية والتعامل مع الأدوات الرقمية.
+                </p>
+
+
+                <div class="content-title">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    تفاصيل ومحاور المنهج
+
+                </div>
+
+
+                <ul class="topics">
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        المرحلة الابتدائية (من رابعة إلى سادس ابتدائي): الأساسيات والأدوات الرقمية.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        المرحلة الإعدادية (أولى وتانية وتالتة إعدادي): المفاهيم المتقدمة وحل المشكلات.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        شرح مبسط وواضح لكافة دروس المنهج المدرسي.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تدريبات عملية وتفاعلية داخل المقر على البرامج والأجهزة.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        مراجعات شاملة وحل أسئلة الامتحانات السابقة بامتياز.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        متابعة مستمرة ومستواك الدراسي خطوة بخطوة.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 المادة الثانية: البرمجة للثانوي
+            ========================= -->
+
+            <section class="subject-card">
+
+
+                <div class="subject-header">
+
+                    <div class="subject-number">
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <span class="subject-label">
+                            المسار الثاني للمواد
+                        </span>
+
+                        <h3 class="subject-title">
+                            مادة البرمجة (أولى وتانية ثانوي)
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <p class="subject-description">
+                    شرح وتأسيس منهجي لمادة البرمجة لطلاب الصفين الأول والثاني الثانوي. نركز على تبسيط الأكواد، الفهم العملي، والتطبيق المباشر داخل القاعة لضمان التفوق في الامتحانات والقدرة على البرمجة الفعليّة.
+                </p>
+
+
+                <div class="content-title">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    تفاصيل ومحاور المنهج
+
+                </div>
+
+
+                <ul class="topics">
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        منهج البرمجة لطلاب الصف الأول الثانوي.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        منهج البرمجة لطلاب الصف الثاني الثانوي.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        شرح المفاهيم الصعبة بطريقة سهلة وممتعة.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        التطبيق العملي الفوري على أجهزة الكمبيوتر بالمقر.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        حل تدريبات الكتب المدرسية والامتحانات بامتياز.
+                    </li>
+
+                    <li class="topic">
+                        <i class="fa-solid fa-check"></i>
+                        تأسيس قوي للمستقبل البرمجي للطالب.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
