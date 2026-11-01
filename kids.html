@@ -118,12 +118,12 @@
         }
 
         /* =========================
-           STAGES
+           STAGES & UI FIXES
         ========================= */
         .stage {
             max-width: 950px;
             margin: 0 auto 35px;
-            padding: 35px;
+            padding: 40px;
             background: white;
             border: 1px solid #e5eaf1;
             border-radius: 25px;
@@ -175,7 +175,7 @@
         }
 
         /* =========================
-           LESSONS
+           TOPICS
         ========================= */
         .content-title {
             display: flex;
@@ -228,15 +228,22 @@
             font-size: 10px;
         }
 
-        /* Level 2 Special Card */
+        /* Level 2 Special Card Fix */
         .level-2-card {
             background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
             border: 1px solid #334155;
+            padding: 40px !important;
+            margin-top: 50px;
+        }
+
+        .level-2-card .stage-header {
+            margin-bottom: 20px;
         }
 
         .level-2-card .stage-number {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             color: #ffc107;
         }
 
@@ -244,20 +251,14 @@
             color: #ffc107;
         }
 
-        .level-2-card .stage-title, 
-        .level-2-card .content-title {
-            color: white;
+        .level-2-card .stage-title {
+            color: #ffffff;
         }
 
-        .level-2-card .stage-description,
-        .level-2-card .topic {
-            color: rgba(255,255,255,0.8);
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.1);
-        }
-
-        .level-2-card .topic:hover {
-            background: rgba(255,255,255,0.1);
+        .level-2-card .stage-description {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0;
+            line-height: 2.2;
         }
 
         /* =========================
@@ -279,8 +280,10 @@
             .section-title h2 {
                 font-size: 26px;
             }
-            .stage {
-                padding: 25px;
+            .stage, 
+            .level-2-card {
+                padding: 24px 20px !important;
+                border-radius: 20px;
             }
             .stage-header {
                 align-items: flex-start;
@@ -308,9 +311,7 @@
 
 <body>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
     <header class="kids-hero">
         <div class="container">
             <a href="index.html#courses" class="back-link">
@@ -327,9 +328,7 @@
         </div>
     </header>
 
-    <!-- =========================
-         CONTENT
-    ========================= -->
+    <!-- CONTENT -->
     <main class="kids-content">
         <div class="container">
 
@@ -339,9 +338,7 @@
                 <p>مستويات مصممة خصيصاً لبناء عقلية تقنية واعية وقوية خطوة بخطوة.</p>
             </div>
 
-            <!-- =========================
-                 المستوى الأول (Level 1)
-            ========================= -->
+            <!-- LEVEL 1 -->
 
             <!-- المرحلة الأولى -->
             <section class="stage">
@@ -430,7 +427,7 @@
                 <ul class="topics">
                     <li class="topic"><i class="fa-solid fa-check"></i> فهم طريقة عمل تطبيقات الهواتف الذكية.</li>
                     <li class="topic"><i class="fa-solid fa-check"></i> تصميم واجهات المستخدم (User Interface).</li>
-                    <li class="topic"><i class="fa-solid fa-check"></i> فهم وط كتابة الأكواد الخاصة بالتطبيقات.</li>
+                    <li class="topic"><i class="fa-solid fa-check"></i> فهم وطريقة كتابة الأكواد الخاصة بالتطبيقات.</li>
                     <li class="topic"><i class="fa-solid fa-check"></i> بناء تطبيق موبايل بسيط ومشاركته.</li>
                 </ul>
             </section>
@@ -504,9 +501,7 @@
                 </ul>
             </section>
 
-            <!-- =========================
-                 المستوى الثاني (Level 2)
-            ========================= -->
+            <!-- LEVEL 2 CARD -->
             <section class="stage level-2-card">
                 <div class="stage-header">
                     <div class="stage-number">
