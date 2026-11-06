@@ -4,21 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>أكاديمية المهندس حسن بغدودة</title>
 
     <!-- الخط والأدوات -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         body {
@@ -131,19 +124,6 @@
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .card-title {
-            margin-bottom: 18px;
-        }
-
-        .card-text {
-            line-height: 2;
         }
 
         /* Reviews */
@@ -303,1137 +283,160 @@
                 padding: 25px;
             }
         }
-        /* =========================
-   Learning Tracks
-   ========================= */
 
-.learning-track-card {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border: 1px solid #e8edf4;
-    border-radius: 28px;
-
-    box-shadow:
-        0 12px 35px rgba(15, 23, 42, 0.06);
-
-    cursor: pointer;
-
-    transition:
-        transform 0.4s cubic-bezier(.2,.8,.2,1),
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
-}
-
-
-/* خط لامع بيعدي على الكارت */
-
-.learning-track-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -120%;
-
-    width: 70%;
-    height: 100%;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,0.18),
-        transparent
-    );
-
-    transform: skewX(-20deg);
-
-    pointer-events: none;
-
-    transition: left 0.8s ease;
-}
-
-
-.learning-track-card:hover::before {
-    left: 150%;
-}
-
-
-.learning-track-card:hover {
-    transform: translateY(-9px);
-
-    border-color: #d7e1ee;
-
-    box-shadow:
-        0 24px 60px rgba(15, 23, 42, 0.12);
-}
-
-
-/* =====================================================
-   HEADER
-   ===================================================== */
-
-.learning-track-top {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    gap: 22px;
-
-    min-height: 190px;
-
-    padding: 38px 36px;
-
-    color: #ffffff;
-}
-
-
-.kids-track .learning-track-top {
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(59,130,246,0.35),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #0f172a,
-            #1d4ed8
-        );
-}
-
-
-.school-track .learning-track-top {
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(148,163,184,0.25),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #0f172a,
-            #334155
-        );
-}
-
-
-/* =====================================================
-   ICON
-   ===================================================== */
-
-.learning-track-icon {
-    width: 70px;
-    height: 70px;
-
-    min-width: 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 21px;
-
-    background: rgba(255,255,255,0.12);
-
-    border: 1px solid rgba(255,255,255,0.18);
-
-    color: #ffc107;
-
-    font-size: 28px;
-
-    backdrop-filter: blur(8px);
-
-    transition:
-        transform 0.4s cubic-bezier(.2,.8,.2,1),
-        background 0.4s ease;
-}
-
-
-.learning-track-card:hover .learning-track-icon {
-    transform:
-        translateY(-4px)
-        rotate(-4deg)
-        scale(1.06);
-
-    background: rgba(255,255,255,0.18);
-}
-
-
-/* =====================================================
-   HEADER TEXT
-   ===================================================== */
-
-.track-label {
-    display: inline-flex;
-
-    align-items: center;
-
-    margin-bottom: 8px;
-
-    padding: 5px 10px;
-
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.09);
-
-    color: #ffc107;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: .5px;
-}
-
-
-.learning-track-top h3 {
-    margin: 0 0 10px;
-
-    color: #ffffff;
-
-    font-size: 28px;
-
-    font-weight: 800;
-
-    line-height: 1.3;
-}
-
-
-.learning-track-top p {
-    max-width: 520px;
-
-    margin: 0;
-
-    color: rgba(255,255,255,.76);
-
-    font-size: 14px;
-
-    line-height: 2;
-}
-
-
-/* =====================================================
-   CONTENT
-   ===================================================== */
-
-.learning-track-body {
-    padding: 38px 36px 36px;
-}
-
-
-/* =====================================================
-   CHILDREN STEPS
-   ===================================================== */
-
-.learning-step {
-    position: relative;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 20px;
-
-    padding: 5px 0;
-
-    cursor: pointer;
-}
-
-
-.learning-step-number {
-    width: 50px;
-    height: 50px;
-
-    min-width: 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 16px;
-
-    background: #eff6ff;
-
-    color: #2563eb;
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    box-shadow:
-        inset 0 0 0 1px #dbeafe;
-
-    transition:
-        transform .3s ease,
-        background .3s ease,
-        color .3s ease;
-}
-
-
-.learning-step:hover .learning-step-number {
-    transform: translateY(-3px) scale(1.05);
-
-    background: #2563eb;
-
-    color: #ffffff;
-}
-
-
-.learning-step-content {
-    flex: 1;
-
-    padding-top: 2px;
-}
-
-
-.learning-step-content span {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: #94a3b8;
-
-    font-size: 12px;
-
-    font-weight: 700;
-}
-
-
-.learning-step-content h4 {
-    margin: 0 0 10px;
-
-    color: #111827;
-
-    font-size: 19px;
-
-    font-weight: 800;
-
-    line-height: 1.4;
-
-    transition: color .3s ease;
-}
-
-
-.learning-step:hover h4 {
-    color: #2563eb;
-}
-
-
-.learning-step-content p {
-    margin: 0;
-
-    color: #64748b;
-
-    font-size: 14px;
-
-    line-height: 2;
-}
-
-
-/* =====================================================
-   CONNECTOR
-   ===================================================== */
-
-.learning-connector {
-    width: 2px;
-
-    height: 40px;
-
-    margin:
-        6px 0
-        6px 24px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #dbe3ee,
-            #eef2f7
-        );
-}
-
-
-/* =====================================================
-   FUTURE STAGES
-   ===================================================== */
-
-.coming-stage {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 8px;
-
-    margin-top: 28px;
-
-    padding: 14px 18px;
-
-    border:
-        1px dashed
-        #d8e0ea;
-
-    border-radius: 15px;
-
-    background: #f8fafc;
-
-    color: #64748b;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-
-    cursor: default;
-}
-
-
-.coming-stage i {
-    color: #f59e0b;
-
-    margin: 0;
-}
-
-
-/* =====================================================
-   SCHOOL SUBJECTS
-   ===================================================== */
-
-.subject-row {
-    position: relative;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 18px;
-
-    padding: 22px;
-
-    border:
-        1px solid
-        #e8edf4;
-
-    border-radius: 19px;
-
-    background: #fcfdff;
-
-    cursor: pointer;
-
-    transition:
-        transform .35s cubic-bezier(.2,.8,.2,1),
-        border-color .3s ease,
-        box-shadow .3s ease,
-        background .3s ease;
-}
-
-
-.subject-row + .subject-row {
-    margin-top: 18px;
-}
-
-
-.subject-row:hover {
-    transform: translateY(-5px);
-
-    border-color: #cbd8e8;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 12px 30px
-        rgba(15,23,42,.07);
-}
-
-
-.subject-row-icon {
-    width: 54px;
-    height: 54px;
-
-    min-width: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 16px;
-
-    background: #eff6ff;
-
-    color: #2563eb;
-
-    font-size: 20px;
-
-    transition:
-        transform .35s ease,
-        background .35s ease,
-        color .35s ease;
-}
-
-
-.subject-row:hover .subject-row-icon {
-    transform:
-        scale(1.08)
-        rotate(-4deg);
-
-    background: #2563eb;
-
-    color: #ffffff;
-}
-
-
-.subject-row-content {
-    flex: 1;
-
-    min-width: 0;
-}
-
-
-.subject-row-title {
-    display: flex;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-bottom: 9px;
-}
-
-
-.subject-row-title h4 {
-    margin: 0;
-
-    color: #111827;
-
-    font-size: 19px;
-
-    font-weight: 800;
-
-    transition: color .3s ease;
-}
-
-
-.subject-row:hover .subject-row-title h4 {
-    color: #2563eb;
-}
-
-
-.subject-row-title span {
-    display: inline-flex;
-
-    align-items: center;
-
-    padding: 5px 10px;
-
-    border-radius: 30px;
-
-    background: #fff8e6;
-
-    color: #9a6700;
-
-    font-size: 11px;
-
-    font-weight: 700;
-}
-
-
-.subject-row-content p {
-    margin: 0;
-
-    color: #64748b;
-
-    font-size: 14px;
-
-    line-height: 2;
-}
-
-
-/* =====================================================
-   INFO
-   ===================================================== */
-
-.subjects-note {
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    margin-top: 22px;
-
-    color: #64748b;
-
-    font-size: 12px;
-
-    line-height: 1.8;
-}
-
-
-.subjects-note i {
-    margin: 0;
-
-    color: #2563eb;
-}
-
-
-/* =====================================================
-   BUTTON
-   ===================================================== */
-
-.learning-track-button {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    width: 100%;
-
-    margin-top: 28px;
-
-    padding: 15px 20px;
-
-    overflow: hidden;
-
-    border-radius: 14px;
-
-    background: #111827;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        transform .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
-}
-
-
-.learning-track-button::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: -100%;
-
-    width: 70%;
-
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.18),
-            transparent
-        );
-
-    transform: skewX(-20deg);
-
-    transition: left .6s ease;
-}
-
-
-.learning-track-button:hover::before {
-    left: 140%;
-}
-
-
-.learning-track-button:hover {
-    transform: translateY(-3px);
-
-    background: #2563eb;
-
-    color: #ffffff;
-
-    box-shadow:
-        0 10px 25px
-        rgba(37,99,235,.22);
-}
-
-
-.learning-track-button i {
-    transition: transform .3s ease;
-}
-
-
-.learning-track-button:hover i {
-    transform: translateX(-5px);
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 767px) {
-
-    .learning-track-top {
-        min-height: auto;
-
-        padding: 30px 24px;
-
-        gap: 16px;
-    }
-
-
-    .learning-track-icon {
-        width: 56px;
-        height: 56px;
-
-        min-width: 56px;
-
-        font-size: 22px;
-    }
-
-
-    .learning-track-top h3 {
-        font-size: 23px;
-    }
-
-
-    .learning-track-top p {
-        font-size: 13px;
-    }
-
-
-    .learning-track-body {
-        padding: 30px 24px 26px;
-    }
-
-
-    .learning-step {
-        gap: 15px;
-    }
-
-
-    .learning-step-number {
-        width: 44px;
-        height: 44px;
-
-        min-width: 44px;
-    }
-
-
-    .subject-row {
-        padding: 18px;
-
-        gap: 14px;
-    }
-
-
-    .subject-row-icon {
-        width: 47px;
-        height: 47px;
-
-        min-width: 47px;
-    }
-
-}/* =====================================================
-   ACADEMY PATHS
-   ===================================================== */
-
-.academy-path-card {
-
-    position: relative;
-
-    display: flex;
-
-    flex-direction: column;
-
-    min-height: 390px;
-
-    padding: 36px;
-
-    overflow: hidden;
-
-    border-radius: 28px;
-
-    text-decoration: none;
-
-    color: #ffffff;
-
-    box-shadow:
-        0 12px 35px rgba(15, 23, 42, 0.08);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease,
-        border-color 0.35s ease;
-
-}
-
-
-/* خلفية الأطفال */
-
-.kids-path {
-
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(59, 130, 246, 0.35),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #0f172a,
-            #1d4ed8
-        );
-
-}
-
-
-/* خلفية المواد */
-
-.subjects-path {
-
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(148, 163, 184, 0.25),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #111827,
-            #334155
-        );
-
-}
-
-
-/* Hover */
-
-.academy-path-card:hover {
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        0 25px 55px rgba(15, 23, 42, 0.16);
-
-}
-
-
-/* =====================================================
-   TOP
-   ===================================================== */
-
-.path-top {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    margin-bottom: 35px;
-
-}
-
-
-/* =====================================================
-   ICON
-   ===================================================== */
-
-.path-icon {
-
-    width: 72px;
-
-    height: 72px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 21px;
-
-    background:
-        rgba(255, 255, 255, 0.12);
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.18);
-
-    color: #ffc107;
-
-    font-size: 29px;
-
-    transition:
-        transform 0.35s ease,
-        background 0.35s ease;
-
-}
-
-
-.academy-path-card:hover .path-icon {
-
-    transform:
-        translateY(-4px)
-        rotate(-4deg)
-        scale(1.06);
-
-    background:
-        rgba(255, 255, 255, 0.19);
-
-}
-
-
-/* =====================================================
-   BADGE
-   ===================================================== */
-
-.path-badge {
-
-    padding:
-        7px 13px;
-
-    border-radius: 50px;
-
-    background:
-        rgba(255, 255, 255, 0.10);
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.12);
-
-    color:
-        rgba(255, 255, 255, 0.82);
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-}
-
-
-/* =====================================================
-   CONTENT
-   ===================================================== */
-
-.path-content {
-
-    flex: 1;
-
-}
-
-
-.path-content h3 {
-
-    margin:
-        0 0 15px;
-
-    color: #ffffff;
-
-    font-size: 30px;
-
-    font-weight: 800;
-
-    line-height: 1.3;
-
-}
-
-
-.path-content p {
-
-    max-width: 540px;
-
-    margin:
-        0 0 25px;
-
-    color:
-        rgba(255, 255, 255, 0.75);
-
-    font-size: 14px;
-
-    line-height: 2;
-
-}
-
-
-/* =====================================================
-   INFO
-   ===================================================== */
-
-.path-info {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-}
-
-
-.path-info span {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding:
-        8px 12px;
-
-    border-radius: 10px;
-
-    background:
-        rgba(255, 255, 255, 0.08);
-
-    color:
-        rgba(255, 255, 255, 0.78);
-
-    font-size: 11px;
-
-}
-
-
-.path-info i {
-
-    color: #ffc107;
-
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-.path-footer {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    margin-top: 30px;
-
-    padding-top: 22px;
-
-    border-top:
-        1px solid
-        rgba(255, 255, 255, 0.12);
-
-    color: #ffffff;
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-}
-
-
-/* =====================================================
-   ARROW
-   ===================================================== */
-
-.path-arrow {
-
-    width: 42px;
-
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 13px;
-
-    background:
-        rgba(255, 255, 255, 0.10);
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease;
-
-}
-
-
-.academy-path-card:hover .path-arrow {
-
-    transform:
-        translateX(-5px);
-
-    background:
-        rgba(255, 255, 255, 0.18);
-
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 767px) {
-
-    .academy-path-card {
-
-        min-height: 350px;
-
-        padding: 27px;
-
-        border-radius: 23px;
-
-    }
-
-
-    .path-content h3 {
-
-        font-size: 25px;
-
-    }
-
-
-    .path-content p {
-
-        font-size: 13px;
-
-    }
-
-
-    .path-icon {
-
-        width: 62px;
-
-        height: 62px;
-
-        font-size: 25px;
-
-    }
-
-}
+        /* Academy Paths */
+        .academy-path-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 390px;
+            padding: 36px;
+            overflow: hidden;
+            border-radius: 28px;
+            text-decoration: none;
+            color: #ffffff;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        .kids-path {
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.35), transparent 35%), linear-gradient(135deg, #0f172a, #1d4ed8);
+        }
+
+        .subjects-path {
+            background: radial-gradient(circle at 90% 10%, rgba(148, 163, 184, 0.25), transparent 35%), linear-gradient(135deg, #111827, #334155);
+        }
+
+        .academy-path-card:hover {
+            color: #ffffff;
+            text-decoration: none;
+            transform: translateY(-8px);
+            box-shadow: 0 25px 55px rgba(15, 23, 42, 0.16);
+        }
+
+        .path-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+
+        .path-icon {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 21px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ffc107;
+            font-size: 29px;
+            transition: transform 0.35s ease, background 0.35s ease;
+        }
+
+        .academy-path-card:hover .path-icon {
+            transform: translateY(-4px) rotate(-4deg) scale(1.06);
+            background: rgba(255, 255, 255, 0.19);
+        }
+
+        .path-badge {
+            padding: 7px 13px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .path-content {
+            flex: 1;
+        }
+
+        .path-content h3 {
+            margin: 0 0 15px;
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .path-content p {
+            max-width: 540px;
+            margin: 0 0 25px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .path-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .path-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 11px;
+        }
+
+        .path-info i {
+            color: #ffc107;
+        }
+
+        .path-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .path-arrow {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: rgba(255, 255, 255, 0.10);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .academy-path-card:hover .path-arrow {
+            transform: translateX(-5px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        @media (max-width: 767px) {
+            .academy-path-card {
+                min-height: 350px;
+                padding: 27px;
+                border-radius: 23px;
+            }
+            .path-content h3 {
+                font-size: 25px;
+            }
+            .path-content p {
+                font-size: 13px;
+            }
+            .path-icon {
+                width: 62px;
+                height: 62px;
+                font-size: 25px;
+            }
+        }
     </style>
 </head>
 
@@ -1441,350 +444,138 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom sticky-top shadow-sm">
-
         <div class="container">
-
             <a class="navbar-brand" href="#">
                 <i class="fa-solid fa-code text-warning"></i>
             </a>
-
-            <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="#hero">
-                            الرئيسية
-                        </a>
+                        <a class="nav-link active" href="#hero">الرئيسية</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#courses">
-                            الكورسات
-                        </a>
+                        <a class="nav-link" href="#courses">الكورسات</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#reviews">
-                            آراء الطلاب
-                        </a>
+                        <a class="nav-link" href="#reviews">آراء الطلاب</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">
-                            الحجز والتسجيل
-                        </a>
+                        <a class="nav-link" href="#contact">الحجز والتسجيل</a>
                     </li>
-
                 </ul>
-
-                <a href="#contact"
-                    class="btn btn-warning fw-bold rounded-pill px-4">
-                    حجز بالمقر
-                </a>
-
+                <a href="#contact" class="btn btn-warning fw-bold rounded-pill px-4">حجز بالمقر</a>
             </div>
-
         </div>
-
     </nav>
 
     <!-- Hero -->
     <section id="hero" class="hero-section">
-
         <div class="container">
-
             <div class="row align-items-center gy-5">
-
                 <div class="col-md-7 text-center text-md-start">
-
                     <span class="badge-custom">
                         <i class="fa-solid fa-location-dot me-1"></i>
                         تعليم حضوري بالمقر المجهز
                     </span>
-
                     <h1 class="display-5 fw-bold">
-
                         اصنع مستقبلك البرمجي
-
                         <br>
-
-                        <span class="text-warning">
-                            مع المهندس حسن بغدودة
-                        </span>
-
+                        <span class="text-warning">مع المهندس حسن بغدودة</span>
                     </h1>
-
                     <p class="lead opacity-75">
-
-                        خبرة أكثر من 7 سنوات في كبرى الشركات البرمجية.
-                        بنقدم شرح حضوري مبسط لمناهج أولى وثانية ثانوي،
-                        وكورسات تفاعلية للأطفال والتأسيس البرمجي الشامل
-                        للمبتدئين والكبار.
-
+                        خبرة أكثر من 7 سنوات في كبرى الشركات البرمجية. بنقدم شرح حضوري مبسط لمناهج أولى وثانية ثانوي، وكورسات تفاعلية للأطفال والتأسيس البرمجي الشامل للمبتدئين والكبار.
                     </p>
-
                     <div class="hero-buttons">
-
                         <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-
-                            <a href="#contact"
-                                class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
-                                احجز مكانك بالمقر
-                            </a>
-
-                            <a href="#courses"
-                                class="btn btn-outline-light btn-lg rounded-pill px-4">
-                                استكشف الكورسات
-                            </a>
-
+                            <a href="#contact" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">احجز مكانك بالمقر</a>
+                            <a href="#courses" class="btn btn-outline-light btn-lg rounded-pill px-4">استكشف الكورسات</a>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="col-md-5">
-
                     <div class="hero-image">
-
-                        <img src="eng-hassan.png"
-                            alt="المهندس حسن بغدودة">
-
+                        <img src="eng-hassan.png" alt="المهندس حسن بغدودة">
                     </div>
-
                 </div>
-
-   
             </div>
         </div>
     </section>
+
     <!-- Courses -->
-
-<!-- Courses -->
-
-<section id="courses" class="courses-section">
-
-    <div class="container">
-
-        <!-- عنوان القسم -->
-
-        <div class="text-center section-title">
-
-            <span class="text-primary fw-bold">
-                المسارات التعليمية
-            </span>
-
-            <h2 class="fw-bold">
-                اختار المسار المناسب لك
-            </h2>
-
-            <p class="text-secondary mt-3">
-                مسارات تعليمية منظمة تساعدك تبدأ من المستوى المناسب
-                وتتطور خطوة بخطوة.
-            </p>
-
-        </div>
-
-
-        <!-- المسارات -->
-
-        <div class="row g-4 mt-4">
-
-
-            <!-- مسار الأطفال -->
-
-            <div class="col-lg-6">
-
-                <a
-                    href="kids.html"
-                    class="academy-path-card kids-path"
-                >
-
-                    <div class="path-top">
-
-                        <div class="path-icon">
-
-                            <i class="fa-solid fa-child-reaching"></i>
-
-                        </div>
-
-
-                        <div class="path-badge">
-                            المسار الأول
-                        </div>
-
-                    </div>
-
-
-                    <div class="path-content">
-
-                        <h3>
-                            مسار الأطفال
-                        </h3>
-
-
-                        <p>
-                            رحلة تعليمية متدرجة تبدأ من أساسيات
-                            الكمبيوتر، ثم تنتقل إلى أساسيات البرمجة
-                            والتفكير المنطقي، مع مراحل إضافية يتم
-                            تطويرها تدريجيًا.
-                        </p>
-
-
-                        <div class="path-info">
-
-                            <span>
-                                <i class="fa-solid fa-layer-group"></i>
-                                مراحل متدرجة
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-child"></i>
-                                مناسب للأطفال
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="path-footer">
-
-                        <span>
-                            استكشف المسار
-                        </span>
-
-                        <span class="path-arrow">
-
-                            <i class="fa-solid fa-arrow-left"></i>
-
-                        </span>
-
-                    </div>
-
-                </a>
-
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <div class="text-center section-title">
+                <span class="text-primary fw-bold">المسارات التعليمية</span>
+                <h2 class="fw-bold">اختار المسار المناسب لك</h2>
+                <p class="text-secondary mt-3">مسارات تعليمية منظمة تساعدك تبدأ من المستوى المناسب وتتطور خطوة بخطوة.</p>
             </div>
-
-
-
-            <!-- المواد الدراسية -->
-
-            <div class="col-lg-6">
-
-                <a
-                    href="subjects.html"
-                    class="academy-path-card subjects-path"
-                >
-
-                    <div class="path-top">
-
-                        <div class="path-icon">
-
-                            <i class="fa-solid fa-graduation-cap"></i>
-
+            <div class="row g-4 mt-4">
+                <!-- مسار الأطفال -->
+                <div class="col-lg-6">
+                    <a href="kids.html" class="academy-path-card kids-path">
+                        <div class="path-top">
+                            <div class="path-icon">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+                            <div class="path-badge">المسار الأول</div>
                         </div>
-
-
-                        <div class="path-badge">
-                            المسار الثاني
+                        <div class="path-content">
+                            <h3>مسار الأطفال</h3>
+                            <p>رحلة تعليمية متدرجة تبدأ من أساسيات الكمبيوتر، ثم تنتقل إلى أساسيات البرمجة والتفكير المنطقي، مع مراحل إضافية يتم تطويرها تدريجيًا.</p>
+                            <div class="path-info">
+                                <span><i class="fa-solid fa-layer-group"></i> مراحل متدرجة</span>
+                                <span><i class="fa-solid fa-child"></i> مناسب للأطفال</span>
+                            </div>
                         </div>
+                        <div class="path-footer">
+                            <span>استكشف المسار</span>
+                            <span class="path-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                        </div>
+                    </a>
+                </div>
 
-                    </div>
-
-
-                    <div class="path-content">
-
-                        <h3>
-                            المواد الدراسية
-                        </h3>
-
-
-                        <p>
-                            مسارات دراسية منظمة حسب المرحلة والمادة،
-                            تساعد الطالب على فهم المحتوى والتدرب عليه
-                            والاستعداد بشكل أفضل.
-                        </p>
-
-
-                        <div class="path-info">
-
-                            <span>
-                                <i class="fa-solid fa-book"></i>
-                                مواد دراسية
-                            </span>
-
-                            <span>
+                <!-- المواد الدراسية -->
+                <div class="col-lg-6">
+                    <a href="subjects.html" class="academy-path-card subjects-path">
+                        <div class="path-top">
+                            <div class="path-icon">
                                 <i class="fa-solid fa-graduation-cap"></i>
-                                حسب المرحلة
-                            </span>
-
+                            </div>
+                            <div class="path-badge">المسار الثاني</div>
                         </div>
-
-                    </div>
-
-
-                    <div class="path-footer">
-
-                        <span>
-                            استكشف المسار
-                        </span>
-
-                        <span class="path-arrow">
-
-                            <i class="fa-solid fa-arrow-left"></i>
-
-                        </span>
-
-                    </div>
-
-                </a>
-
+                        <div class="path-content">
+                            <h3>المواد الدراسية</h3>
+                            <p>مسارات دراسية منظمة حسب المرحلة والمادة، تساعد الطالب على فهم المحتوى والتدرب عليه والاستعداد بشكل أفضل.</p>
+                            <div class="path-info">
+                                <span><i class="fa-solid fa-book"></i> مواد دراسية</span>
+                                <span><i class="fa-solid fa-graduation-cap"></i> حسب المرحلة</span>
+                            </div>
+                        </div>
+                        <div class="path-footer">
+                            <span>استكشف المسار</span>
+                            <span class="path-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                        </div>
+                    </a>
+                </div>
             </div>
-
-
         </div>
+    </section>
 
-    </div>
-
-</section>
     <!-- Reviews -->
     <section id="reviews" class="bg-light">
-
         <div class="container">
-
             <div class="text-center section-title">
-
-                <span class="text-primary fw-bold">
-                    آراء وتجارب
-                </span>
-
-                <h2 class="fw-bold">
-                    ماذا قالوا عن الشرح بالمقر؟
-                </h2>
-
+                <span class="text-primary fw-bold">آراء وتجارب</span>
+                <h2 class="fw-bold">ماذا قالوا عن الشرح بالمقر؟</h2>
             </div>
-
             <div class="row g-4">
-
                 <div class="col-md-4">
-
                     <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-
                         <div class="card-body d-flex flex-column">
-
                             <div class="d-flex justify-content-between align-items-center mb-3">
-
                                 <div class="text-warning">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -1792,50 +583,27 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-
                                 <i class="fa-solid fa-quote-left testimonial-icon"></i>
-
                             </div>
-
                             <p class="card-text text-secondary">
-                                "بجد شكراً يا باشمهندس، المادة كانت تقيلة
-                                عليا جداً في المدرسة ومش فاهم منها حاجة،
-                                بس التطبيق العملي معاك في القاعة خلى الدنيا
-                                سهلة والامتحان عدى بامتياز."
+                                "بجد شكراً يا باشمهندس، المادة كانت تقيلة عليا جداً في المدرسة ومش فاهم منها حاجة، بس التطبيق العملي معاك في القاعة خلى الدنيا سهلة والامتحان عدى بامتياز."
                             </p>
-
                             <div class="d-flex align-items-center mt-auto pt-3 border-top">
-
                                 <div class="avatar-icon me-3">
                                     <i class="fa-solid fa-user-graduate"></i>
                                 </div>
-
                                 <div>
-                                    <h6 class="fw-bold mb-0 text-dark">
-                                        طالب بالصف الثاني الثانوي
-                                    </h6>
-
-                                    <small class="text-muted">
-                                        كورس منهج المدرسة
-                                    </small>
+                                    <h6 class="fw-bold mb-0 text-dark">طالب بالصف الثاني الثانوي</h6>
+                                    <small class="text-muted">كورس منهج المدرسة</small>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="col-md-4">
-
                     <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-
                         <div class="card-body d-flex flex-column">
-
                             <div class="d-flex justify-content-between align-items-center mb-3">
-
                                 <div class="text-warning">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -1843,50 +611,27 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-
                                 <i class="fa-solid fa-quote-left testimonial-icon"></i>
-
                             </div>
-
                             <p class="card-text text-secondary">
-                                "فرق كبير جداً في طريقة تفكير ابني من يوم
-                                ما بدأ معاكم.. بقى حابب الشغف والكمبيوتر
-                                وبيدور بنفسه يفهم المشاكل ويحلها.
-                                طريقتكم مع الأطفال ممتازة."
+                                "فرق كبير جداً في طريقة تفكير ابني من يوم ما بدأ معاكم.. بقى حابب الشغف والكمبيوتر وبيدور بنفسه يفهم المشاكل ويحلها. طريقتكم مع الأطفال ممتازة."
                             </p>
-
                             <div class="d-flex align-items-center mt-auto pt-3 border-top">
-
                                 <div class="avatar-icon me-3">
                                     <i class="fa-solid fa-user"></i>
                                 </div>
-
                                 <div>
-                                    <h6 class="fw-bold mb-0 text-dark">
-                                        ولي أمر طالب
-                                    </h6>
-
-                                    <small class="text-muted">
-                                        كورس برمجة الأطفال
-                                    </small>
+                                    <h6 class="fw-bold mb-0 text-dark">ولي أمر طالب</h6>
+                                    <small class="text-muted">كورس برمجة الأطفال</small>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="col-md-4">
-
                     <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-
                         <div class="card-body d-flex flex-column">
-
                             <div class="d-flex justify-content-between align-items-center mb-3">
-
                                 <div class="text-warning">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -1894,352 +639,145 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-
                                 <i class="fa-solid fa-quote-left testimonial-icon"></i>
-
                             </div>
-
                             <p class="card-text text-secondary">
-                                "كنت خايف ابدأ لأني ماليش أي خلفية عن
-                                البرمجة، بس الباشمهندس حسن بيمشي خطوة
-                                بخطوة وبيعيد لحد ما المعلومة تثبت.
-                                التأسيس حقيقي ومحترم."
+                                "كنت خايف ابدأ لأني ماليش أي خلفية عن البرمجة، بس الباشمهندس حسن بيمشي خطوة بخطوة وبيعيد لحد ما المعلومة تثبت. التأسيس حقيقي ومحترم."
                             </p>
-
                             <div class="d-flex align-items-center mt-auto pt-3 border-top">
-
                                 <div class="avatar-icon me-3">
                                     <i class="fa-solid fa-laptop-code"></i>
                                 </div>
-
                                 <div>
-                                    <h6 class="fw-bold mb-0 text-dark">
-                                        متدرب بالمسار الشامل
-                                    </h6>
-
-                                    <small class="text-muted">
-                                        تأسيس البرمجة للكبار
-                                    </small>
+                                    <h6 class="fw-bold mb-0 text-dark">متدرب بالمسار الشامل</h6>
+                                    <small class="text-muted">تأسيس البرمجة للكبار</small>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- Contact -->
     <section id="contact">
-
         <div class="container">
-
             <div class="row justify-content-center">
-
                 <div class="col-md-8">
-
                     <div class="contact-box shadow">
-
                         <div class="text-center mb-4">
-
-                            <h3 class="fw-bold">
-                                احجز مكانك بالمقر الآن
-                            </h3>
-
-                            <p class="text-light opacity-75">
-                                سجل بياناتك وسيتم توجيهك للواتساب
-                                لتأكيد الحجز فوراً
-                            </p>
-
+                            <h3 class="fw-bold">احجز مكانك بالمقر الآن</h3>
+                            <p class="text-light opacity-75">سجل بياناتك وسيتم توجيهك للواتساب لتأكيد الحجز فوراً</p>
                         </div>
-
                         <form id="whatsappForm">
-
                             <div class="mb-4">
-
-                                <label class="form-label fw-bold">
-                                    الاسم بالكامل
-                                </label>
-
-                                <input type="text"
-                                    id="studentName"
-                                    class="form-control form-control-lg fs-6"
-                                    placeholder="أدخل اسمك"
-                                    required>
-
+                                <label class="form-label fw-bold">الاسم بالكامل</label>
+                                <input type="text" id="studentName" class="form-control form-control-lg fs-6" placeholder="أدخل اسمك" required>
                             </div>
-
                             <div class="mb-4">
-
-                                <label class="form-label fw-bold">
-                                    رقم الهاتف (واتساب)
-                                </label>
-
-                                <input type="tel"
-                                    id="studentPhone"
-                                    class="form-control form-control-lg fs-6"
-                                    placeholder="01xxxxxxxxx"
-                                    required>
-
+                                <label class="form-label fw-bold">رقم الهاتف (واتساب)</label>
+                                <input type="tel" id="studentPhone" class="form-control form-control-lg fs-6" placeholder="01xxxxxxxxx" required>
                             </div>
-
                             <div class="mb-4">
-
-                                <label class="form-label fw-bold">
-                                    اختر المسار المطلوب
-                                </label>
-
-                                <select id="studentCourse"
-                                    class="form-select form-select-lg fs-6"
-                                    required>
-                                    <option value="" disabled selected>
-                                        اختر المسار أو المادة...
-                                    </option>
-
-                                    <option value="الأطفال - أساسيات الكمبيوتر">
-                                        الأطفال - أساسيات الكمبيوتر
-                                    </option>
-
-                                    <option value="الأطفال - أساسيات البرمجة">
-                                        الأطفال - أساسيات البرمجة
-                                    </option>
-
-                                    <option value="ICT - من 4 ابتدائي إلى 3 إعدادي">
-                                        ICT - من 4 ابتدائي إلى 3 إعدادي
-                                    </option>
-
-                                    <option value="البرمجة - أولى وثانية ثانوي">
-                                        البرمجة - أولى وثانية ثانوي
-                                    </option>
-
+                                <label class="form-label fw-bold">اختر المسار المطلوب</label>
+                                <select id="studentCourse" class="form-select form-select-lg fs-6" required>
+                                    <option value="" disabled selected>اختر المسار أو المادة...</option>
+                                    <option value="الأطفال - أساسيات الكمبيوتر">الأطفال - أساسيات الكمبيوتر</option>
+                                    <option value="الأطفال - أساسيات البرمجة">الأطفال - أساسيات البرمجة</option>
+                                    <option value="ICT - من 4 ابتدائي إلى 3 إعدادي">ICT - من 4 ابتدائي إلى 3 إعدادي</option>
+                                    <option value="البرمجة - أولى وثانية ثانوي">البرمجة - أولى وثانية ثانوي</option>
                                 </select>
-
                             </div>
-
-                            <button type="submit"
-                                class="btn btn-success btn-lg fw-bold w-100 rounded-pill mt-3 py-3">
-
-                                <i class="fa-brands fa-whatsapp me-2 fs-5"></i>
-
-                                إرسال الحجز عبر الواتساب
-
+                            <button type="submit" class="btn btn-success btn-lg fw-bold w-100 rounded-pill mt-3 py-3">
+                                <i class="fa-brands fa-whatsapp me-2 fs-5"></i> إرسال الحجز عبر الواتساب
                             </button>
-
                         </form>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- Footer -->
     <footer class="footer-modern">
-
         <div class="container">
-
             <div class="row gy-5">
-
                 <div class="col-lg-4 col-md-6">
-
                     <h5 class="footer-title">
-
                         <i class="fa-solid fa-code text-warning me-2"></i>
-
                         Eng. Hassan Baghdoda
-
                     </h5>
-
                     <p class="small text-light opacity-75">
-
-                        أكاديمية متخصصة في تقديم أحدث المناهج
-                        البرمجية والتأسيس العملي بأسلوب حضوري
-                        مبسط وممتع لكل الفئات العمرية مع المتابعة
-                        الفردية الدائمة داخل المقر.
-
+                        أكاديمية متخصصة في تقديم أحدث المناهج البرمجية والتأسيس العملي بأسلوب حضوري مبسط وممتع لكل الفئات العمرية مع المتابعة الفردية الدائمة داخل المقر.
                     </p>
-
                     <div class="mt-4">
-
-                        <a href="https://www.facebook.com/profile.php?id=61586512111019" 
-                            target="_blank"
-                            class="social-icon">
-                            
+                        <a href="https://www.facebook.com/profile.php?id=61586512111019" target="_blank" class="social-icon">
                             <i class="fa-brands fa-facebook-f"></i>
-
                         </a>
-
-                        <a href="https://wa.me/201019472905"
-                            target="_blank"
-                            class="social-icon">
-
+                        <a href="https://wa.me/201019472905" target="_blank" class="social-icon">
                             <i class="fa-brands fa-whatsapp"></i>
-
                         </a>
-
-
                         <a href="#" class="social-icon">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
-
                     </div>
-
                 </div>
-
                 <div class="col-lg-4 col-md-6">
-
-                    <h5 class="footer-title">
-                        روابط سريعة
-                    </h5>
-
+                    <h5 class="footer-title">روابط سريعة</h5>
                     <ul class="footer-links small">
-
-                        <li>
-                            <a href="#hero">
-                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
-                                الصفحة الرئيسية
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#courses">
-                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
-                                المسارات المتاحة
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#reviews">
-                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
-                                آراء الطلاب
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#contact">
-                                <i class="fa-solid fa-chevron-left text-primary me-2"></i>
-                                حجز مكان بالمقر
-                            </a>
-                        </li>
-
+                        <li><a href="#hero"><i class="fa-solid fa-chevron-left text-primary me-2"></i>الصفحة الرئيسية</a></li>
+                        <li><a href="#courses"><i class="fa-solid fa-chevron-left text-primary me-2"></i>المسارات المتاحة</a></li>
+                        <li><a href="#reviews"><i class="fa-solid fa-chevron-left text-primary me-2"></i>آراء الطلاب</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-left text-primary me-2"></i>حجز مكان بالمقر</a></li>
                     </ul>
-
                 </div>
-
                 <div class="col-lg-4 col-md-12">
-
-                    <h5 class="footer-title">
-                        معلومات المقر والتواصل
-                    </h5>
-
+                    <h5 class="footer-title">معلومات المقر والتواصل</h5>
                     <div class="contact-info-item small">
-
                         <i class="fa-solid fa-location-dot"></i>
-
-                        <span>
-                            المقر الرئيسي المجهز للتدريب الحضوري
-                        </span>
-
+                        <span>المقر الرئيسي المجهز للتدريب الحضوري</span>
                     </div>
-
                     <div class="contact-info-item small">
-
                         <i class="fa-solid fa-phone"></i>
-
-                        <span>
-                            واتساب والتواصل: 01019472905
-                        </span>
-
+                        <span>واتساب والتواصل: 01019472905</span>
                     </div>
-
                     <div class="contact-info-item small">
-
                         <i class="fa-solid fa-clock"></i>
-
-                        <span>
-                            مواعيد العمل: طوال أيام الأسبوع
-                        </span>
-
+                        <span>مواعيد العمل: طوال أيام الأسبوع</span>
                     </div>
-
                 </div>
-
             </div>
-
-           <hr class="border-secondary my-5 opacity-25">
-
+            <hr class="border-secondary my-5 opacity-25">
             <div class="row align-items-center copyright text-center small">
                 <div class="col-12 text-light opacity-50">
                     جميع الحقوق محفوظة للباشمهندسة أمامه &copy; 2026
                 </div>
             </div>
-
-            </div>
-
         </div>
-
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- WhatsApp -->
-     <script>
-        document
-            .getElementById('whatsappForm')
-            .addEventListener('submit', function (e) {
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var phoneNumber = "201019472905";
+            var name = document.getElementById('studentName').value;
+            var phone = document.getElementById('studentPhone').value;
+            var course = document.getElementById('studentCourse').value;
 
-                e.preventDefault();
+            var message = "السلام عليكم ورحمة الله وبركاته، أرغب في الحجز بالمقر مع الباشمهندس حسن.%0A%0A" +
+                "📌 *الاسم:* " + encodeURIComponent(name) + "%0A" +
+                "📞 *رقم الهاتف:* " + encodeURIComponent(phone) + "%0A" +
+                "📚 *المسار المطلوب:* " + encodeURIComponent(course);
 
-                var phoneNumber = "201019472905";
-
-                var name =
-                    document.getElementById('studentName').value;
-
-                var phone =
-                    document.getElementById('studentPhone').value;
-
-                var course =
-                    document.getElementById('studentCourse').value;
-
-                var message =
-                    "السلام عليكم ورحمة الله وبركاته، أرغب في الحجز بالمقر مع الباشمهندس حسن.%0A%0A" +
-
-                    "📌 *الاسم:* " +
-                    encodeURIComponent(name) +
-                    "%0A" +
-
-                    "📞 *رقم الهاتف:* " +
-                    encodeURIComponent(phone) +
-                    "%0A" +
-
-                    "📚 *المسار المطلوب:* " +
-                    encodeURIComponent(course);
-
-                var whatsappUrl =
-                    "https://wa.me/" +
-                    phoneNumber +
-                    "?text=" +
-                    message;
-
-                window.open(whatsappUrl, '_blank');
-
-            });
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+            window.open(whatsappUrl, '_blank');
+        });
     </script>
-
 </body>
 
 </html>
-
-        
-       
