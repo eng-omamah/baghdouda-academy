@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أكاديمية المهندس حسن بغدودة</title>
 
-    <!-- الخط والأدوات -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -185,10 +184,6 @@
             margin-bottom: 22px;
         }
 
-        .footer-modern p {
-            line-height: 2;
-        }
-
         .footer-links {
             list-style: none;
             padding: 0;
@@ -241,47 +236,6 @@
         .contact-info-item i {
             width: 32px;
             color: #ffc107;
-        }
-
-        /* Mobile */
-        @media (max-width: 767px) {
-            .navbar-brand {
-                margin-left: 10px;
-            }
-
-            .navbar-brand i {
-                font-size: 23px;
-            }
-
-            .hero-section {
-                padding: 60px 0;
-            }
-
-            .hero-section h1 {
-                font-size: 32px;
-            }
-
-            .hero-section p {
-                font-size: 16px;
-                line-height: 2;
-            }
-
-            .hero-image {
-                margin-top: 25px;
-                padding: 10px;
-            }
-
-            .hero-image img {
-                max-width: 320px;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-
-            .contact-box {
-                padding: 25px;
-            }
         }
 
         /* Academy Paths */
@@ -523,10 +477,10 @@
                             <div class="path-badge">المسار الأول</div>
                         </div>
                         <div class="path-content">
-                            <h3>مسار الأطفال</h3>
-                            <p>رحلة تعليمية متدرجة تبدأ من أساسيات الكمبيوتر، ثم تنتقل إلى أساسيات البرمجة والتفكير المنطقي، مع مراحل إضافية يتم تطويرها تدريجيًا.</p>
+                            <h3>مسار الأطفال (Level 1 & Level 2)</h3>
+                            <p>رحلة تعليمية متدرجة من 7 مراحل (كمبيوتر، برمجة، روبوتات، تطبيقات موبايل، تصميم مواقع، ذكاء اصطناعي، وبايثون) وصولاً للمستوى الثاني واختيار التخصص.</p>
                             <div class="path-info">
-                                <span><i class="fa-solid fa-layer-group"></i> مراحل متدرجة</span>
+                                <span><i class="fa-solid fa-layer-group"></i> 7 مراحل متدرجة</span>
                                 <span><i class="fa-solid fa-child"></i> مناسب للأطفال</span>
                             </div>
                         </div>
@@ -548,10 +502,10 @@
                         </div>
                         <div class="path-content">
                             <h3>المواد الدراسية</h3>
-                            <p>مسارات دراسية منظمة حسب المرحلة والمادة، تساعد الطالب على فهم المحتوى والتدرب عليه والاستعداد بشكل أفضل.</p>
+                            <p>مسارات دراسية منظمة تغطي مناهج تكنولوجيا المعلومات والاتصالات (ICT) من 4 ابتدائي إلى 3 إعدادي، ومناهج البرمجة لطلبة أولى وتانية ثانوي.</p>
                             <div class="path-info">
-                                <span><i class="fa-solid fa-book"></i> مواد دراسية</span>
-                                <span><i class="fa-solid fa-graduation-cap"></i> حسب المرحلة</span>
+                                <span><i class="fa-solid fa-book"></i> ICT والبرمجة</span>
+                                <span><i class="fa-solid fa-graduation-cap"></i> ابتدائي إلى ثانوي</span>
                             </div>
                         </div>
                         <div class="path-footer">
@@ -683,10 +637,9 @@
                                 <label class="form-label fw-bold">اختر المسار المطلوب</label>
                                 <select id="studentCourse" class="form-select form-select-lg fs-6" required>
                                     <option value="" disabled selected>اختر المسار أو المادة...</option>
-                                    <option value="الأطفال - أساسيات الكمبيوتر">الأطفال - أساسيات الكمبيوتر</option>
-                                    <option value="الأطفال - أساسيات البرمجة">الأطفال - أساسيات البرمجة</option>
-                                    <option value="ICT - من 4 ابتدائي إلى 3 إعدادي">ICT - من 4 ابتدائي إلى 3 إعدادي</option>
-                                    <option value="البرمجة - أولى وثانية ثانوي">البرمجة - أولى وثانية ثانوي</option>
+                                    <option value="مسار الأطفال (Level 1 & Level 2)">مسار الأطفال (Level 1 & Level 2)</option>
+                                    <option value="مادة ICT (من 4 ابتدائي إلى 3 إعدادي)">مادة ICT (من 4 ابتدائي إلى 3 إعدادي)</option>
+                                    <option value="مادة البرمجة (أولى وتانية ثانوي)">مادة البرمجة (أولى وتانية ثانوي)</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-success btn-lg fw-bold w-100 rounded-pill mt-3 py-3">
