@@ -1,14 +1,693 @@
-<!-- Reviews -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية المهندس حسن بغدودة</title>
+
+    <!-- الخطوط والمكتبات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        p {
+            line-height: 2;
+        }
+
+        /* =========================
+           NAVBAR UI
+        ========================= */
+        .bg-dark-custom {
+            background: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .navbar {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            margin-left: 30px;
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            font-size: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover i {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .navbar-nav .nav-link {
+            padding-right: 18px !important;
+            padding-left: 18px !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #ffc107 !important;
+            transform: translateY(-1px);
+        }
+
+        .btn-warning-glow {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            color: #0f172a !important;
+            box-shadow: 0 4px 20px rgba(255, 193, 7, 0.35);
+            transition: all 0.3s cubic-bezier(.2, .8, .2, 1) !important;
+            border: none;
+        }
+
+        .btn-warning-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.5);
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+        .hero-section {
+            position: relative;
+            background: radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.25), transparent 45%),
+                        linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 100px 0 110px;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 193, 7, 0.05);
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.4;
+            margin-bottom: 25px !important;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            line-height: 2.1;
+            color: rgba(255, 255, 255, 0.82);
+            margin-bottom: 30px !important;
+        }
+
+        .badge-custom {
+            border: 1px solid rgba(255, 193, 7, 0.4);
+            background: rgba(255, 193, 7, 0.08);
+            color: #ffc107;
+            padding: 9px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 410px;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 28px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        /* =========================
+           SECTIONS & TITLES
+        ========================= */
+        section {
+            padding-top: 90px !important;
+            padding-bottom: 90px !important;
+        }
+
+        .section-title {
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        /* =========================
+           ACADEMY PATHS CARDS (UI/UX)
+        ========================= */
+        .academy-path-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 410px;
+            padding: 40px;
+            overflow: hidden;
+            border-radius: 28px;
+            text-decoration: none;
+            color: #ffffff;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+            transition: transform 0.4s cubic-bezier(.2, .8, .2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+            border: 1px solid transparent;
+        }
+
+        .kids-path {
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.35), transparent 40%),
+                        linear-gradient(135deg, #0f172a, #1d4ed8);
+        }
+
+        .subjects-path {
+            background: radial-gradient(circle at 90% 10%, rgba(148, 163, 184, 0.25), transparent 40%),
+                        linear-gradient(135deg, #111827, #334155);
+        }
+
+        .academy-path-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -130%;
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.8s ease;
+            pointer-events: none;
+        }
+
+        .academy-path-card:hover::before {
+            left: 150%;
+        }
+
+        .academy-path-card:hover {
+            color: #ffffff;
+            text-decoration: none;
+            transform: translateY(-9px);
+            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.2);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .path-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .path-icon {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ffc107;
+            font-size: 28px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+
+        .academy-path-card:hover .path-icon {
+            transform: translateY(-4px) rotate(-5deg) scale(1.08);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .path-badge {
+            padding: 7px 16px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffc107;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .path-content flex: 1;
+
+        .path-content h3 {
+            margin: 0 0 14px;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        .path-content p {
+            max-width: 540px;
+            margin: 0 0 25px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .path-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .path-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .path-info i {
+            color: #ffc107;
+        }
+
+        .path-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .path-arrow {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .academy-path-card:hover .path-arrow {
+            transform: translateX(-6px);
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        /* =========================
+           REVIEWS & TESTIMONIALS (UI/UX)
+        ========================= */
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #e8edf4;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(.2, .8, .2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: #cbd8e8;
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.09);
+        }
+
+        .testimonial-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #ffc107);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .testimonial-card:hover::after {
+            opacity: 1;
+        }
+
+        .testimonial-icon {
+            font-size: 2rem;
+            color: #ffc107;
+            opacity: 0.35;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover .testimonial-icon {
+            transform: scale(1.15) rotate(6deg);
+        }
+
+        .avatar-icon {
+            width: 48px;
+            height: 48px;
+            background: #eff6ff;
+            color: #2563eb;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .testimonial-card:hover .avatar-icon {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        /* =========================
+           CONTACT BOX
+        ========================= */
+        .contact-box {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #ffffff;
+            border-radius: 28px;
+            padding: 48px;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+        }
+
+        .form-control, .form-select {
+            border-radius: 14px;
+            padding: 14px 18px;
+            border: 1px solid #334155;
+            background-color: #0f172a;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #0f172a;
+            color: white;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: #64748b;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+        .footer-modern {
+            background: #090d16;
+            color: #94a3b8;
+            padding-top: 75px;
+            padding-bottom: 30px;
+            border-top: 4px solid #2563eb;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffc107;
+            transform: translateX(-6px);
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            background: #1e293b;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .social-icon:hover {
+            background: #2563eb;
+            color: #ffffff;
+            transform: translateY(-4px);
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            color: #cbd5e1;
+        }
+
+        .contact-info-item i {
+            width: 34px;
+            color: #ffc107;
+            font-size: 16px;
+        }
+
+        /* =========================
+           RESPONSIVE UI
+        ========================= */
+        @media (max-width: 767px) {
+            .hero-section {
+                padding: 65px 0 80px;
+            }
+
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .hero-section p {
+                font-size: 15px;
+            }
+
+            .academy-path-card {
+                min-height: 360px;
+                padding: 28px;
+                border-radius: 22px;
+            }
+
+            .path-content h3 {
+                font-size: 24px;
+            }
+
+            .contact-box {
+                padding: 28px 20px;
+                border-radius: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-code text-warning me-2"></i>
+                <span class="fw-bold text-white fs-5">Eng. Hassan Baghdoda</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">الكورسات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">آراء الطلاب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">الحجز والتسجيل</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-warning-glow fw-bold rounded-pill px-4 py-2">حجز بالمقر</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-md-7 text-center text-md-start">
+                    <span class="badge-custom">
+                        <i class="fa-solid fa-location-dot"></i>
+                        تعليم حضوري بالمقر المجهز
+                    </span>
+                    <h1>
+                        اصنع مستقبلك البرمجي
+                        <br>
+                        <span class="text-warning">مع المهندس حسن بغدودة</span>
+                    </h1>
+                    <p>
+                        خبرة أكثر من 7 سنوات في كبرى الشركات البرمجية. بنقدم شرح حضوري مبسط لمناهج أولى وثانية ثانوي، وكورسات تفاعلية للأطفال والتأسيس البرمجي الشامل للمبتدئين.
+                    </p>
+                    <div class="hero-buttons">
+                        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                            <a href="#contact" class="btn btn-warning-glow btn-lg fw-bold rounded-pill px-4">احجز مكانك بالمقر</a>
+                            <a href="#courses" class="btn btn-outline-light btn-lg rounded-pill px-4">استكشف المسارات</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="hero-image">
+                        <img src="eng-hassan.png" alt="المهندس حسن بغدودة">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses / Paths -->
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <div class="text-center section-title">
+                <span class="text-primary fw-bold">المسارات التعليمية</span>
+                <h2>اختار المسار المناسب لك</h2>
+                <p class="text-secondary mt-2">مسارات تعليمية منظمة تساعدك تبدأ من المستوى المناسب وتتطور خطوة بخطوة.</p>
+            </div>
+            <div class="row g-4 mt-2">
+                <!-- مسار الأطفال -->
+                <div class="col-lg-6">
+                    <a href="kids.html" class="academy-path-card kids-path">
+                        <div class="path-top">
+                            <div class="path-icon">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+                            <div class="path-badge">المسار الأول</div>
+                        </div>
+                        <div class="path-content">
+                            <h3>مسار الأطفال (Level 1 & Level 2)</h3>
+                            <p>رحلة متدرجة من 7 مراحل (كمبيوتر، برمجة، روبوتات، تطبيقات موبايل، تصميم مواقع، ذكاء اصطناعي، وبايثون) وصولاً للمستوى الثاني واختيار التخصص.</p>
+                            <div class="path-info">
+                                <span><i class="fa-solid fa-layer-group"></i> 7 مراحل متدرجة</span>
+                                <span><i class="fa-solid fa-child"></i> مناسب للأطفال</span>
+                            </div>
+                        </div>
+                        <div class="path-footer">
+                            <span>استكشف المسار التفصيلي</span>
+                            <span class="path-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- المواد الدراسية -->
+                <div class="col-lg-6">
+                    <a href="subjects.html" class="academy-path-card subjects-path">
+                        <div class="path-top">
+                            <div class="path-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="path-badge">المسار الثاني</div>
+                        </div>
+                        <div class="path-content">
+                            <h3>المواد الدراسية</h3>
+                            <p>مسارات دراسية منظمة تغطي مناهج تكنولوجيا المعلومات والاتصالات (ICT) من 4 ابتدائي إلى 3 إعدادي، ومناهج البرمجة لطلبة أولى وتانية ثانوي.</p>
+                            <div class="path-info">
+                                <span><i class="fa-solid fa-book"></i> ICT والبرمجة</span>
+                                <span><i class="fa-solid fa-graduation-cap"></i> ابتدائي إلى ثانوي</span>
+                            </div>
+                        </div>
+                        <div class="path-footer">
+                            <span>استكشف المواد الدراسية</span>
+                            <span class="path-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
     <section id="reviews" class="bg-light">
         <div class="container">
             <div class="text-center section-title">
                 <span class="text-primary fw-bold">آراء وتجارب</span>
-                <h2 class="fw-bold">ماذا قالوا عن الدراسة والشرح بالمقر؟</h2>
+                <h2>ماذا قال الطلاب وأولياء الأمور عن الشرح بالمقر؟</h2>
+                <p class="text-secondary mt-2">قصص نجاح وتجارب حقيقية لطلابنا في مسار الأطفال والمواد الدراسية.</p>
             </div>
             <div class="row g-4">
+                <!-- رأي 1 -->
                 <div class="col-md-4">
-                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card testimonial-card h-100 p-4 border-0">
+                        <div class="card-body d-flex flex-column p-0">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <div class="text-warning">
                                     <i class="fa-solid fa-star"></i>
@@ -19,10 +698,10 @@
                                 </div>
                                 <i class="fa-solid fa-quote-left testimonial-icon"></i>
                             </div>
-                            <p class="card-text text-secondary">
-                                "بجد شكراً يا باشمهندس، مادة البرمجة كانت تقيلة عليا جداً في الثانوي ومش فاهم منها حاجة، بس الشرح والتطبيق العملي جوه القاعة والمتابعة الفردية خلوا الدنيا سهلة والامتحان عدى بامتياز."
+                            <p class="card-text text-secondary mb-4">
+                                "بجد شكراً يا باشمهندس، مادة البرمجة في الثانوي كانت تقيلة جداً ومش فاهم منها حاجة، بس الشرح والتطبيق العملي جوه القاعة والمتابعة الفردية خلوا الدنيا سهلة والامتحان عدى بامتياز."
                             </p>
-                            <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="d-flex align-items-center mt-auto pt-3 border-top border-light">
                                 <div class="avatar-icon me-3">
                                     <i class="fa-solid fa-user-graduate"></i>
                                 </div>
@@ -34,9 +713,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- رأي 2 -->
                 <div class="col-md-4">
-                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card testimonial-card h-100 p-4 border-0">
+                        <div class="card-body d-flex flex-column p-0">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <div class="text-warning">
                                     <i class="fa-solid fa-star"></i>
@@ -47,10 +728,10 @@
                                 </div>
                                 <i class="fa-solid fa-quote-left testimonial-icon"></i>
                             </div>
-                            <p class="card-text text-secondary">
+                            <p class="card-text text-secondary mb-4">
                                 "فرق كبير جداً في طريقة تفكير ابني من يوم ما بدأ معاكم مسار الأطفال.. بقى فاهم الروبوتات والكمبيوتر كويس جداً وبيدور بنفسه. طريقتكم في الشرح الحضوري ممتازة ومريحة."
                             </p>
-                            <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="d-flex align-items-center mt-auto pt-3 border-top border-light">
                                 <div class="avatar-icon me-3">
                                     <i class="fa-solid fa-user"></i>
                                 </div>
@@ -62,9 +743,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- رأي 3 -->
                 <div class="col-md-4">
-                    <div class="card testimonial-card h-100 p-3 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card testimonial-card h-100 p-4 border-0">
+                        <div class="card-body d-flex flex-column p-0">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <div class="text-warning">
                                     <i class="fa-solid fa-star"></i>
@@ -75,10 +758,10 @@
                                 </div>
                                 <i class="fa-solid fa-quote-left testimonial-icon"></i>
                             </div>
-                            <p class="card-text text-secondary">
-                                "منهج الICT كان دايماً بيعمل لي قلق، بس مع الباشمهندس حسن الشرح وبساطة المعلومة في المقر خلتني أحب المادة وجبت الدرجة النهائية في الإعدادية. شكراً ليكم بجد!"
+                            <p class="card-text text-secondary mb-4">
+                                "منهج الـ ICT كان دايماً بيعمل لي قلق، بس مع الباشمهندس حسن الشرح وبساطة المعلومة في المقر خلتني أحب المادة وجبت الدرجة النهائية. شكراً ليكم بجد على الأسلوب الراقي!"
                             </p>
-                            <div class="d-flex align-items-center mt-auto pt-3 border-top">
+                            <div class="d-flex align-items-center mt-auto pt-3 border-top border-light">
                                 <div class="avatar-icon me-3">
                                     <i class="fa-solid fa-laptop-code"></i>
                                 </div>
@@ -93,3 +776,124 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-box">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold text-white">احجز مكانك بالمقر الآن</h3>
+                            <p class="text-light opacity-75">سجل بياناتك وسيتم توجيهك للواتساب لتأكيد الحجز فوراً</p>
+                        </div>
+                        <form id="whatsappForm">
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">الاسم بالكامل</label>
+                                <input type="text" id="studentName" class="form-control form-control-lg fs-6" placeholder="أدخل اسمك" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">رقم الهاتف (واتساب)</label>
+                                <input type="tel" id="studentPhone" class="form-control form-control-lg fs-6" placeholder="01xxxxxxxxx" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">اختر المسار المطلوب</label>
+                                <select id="studentCourse" class="form-select form-select-lg fs-6" required>
+                                    <option value="" disabled selected>اختر المسار أو المادة...</option>
+                                    <option value="مسار الأطفال (Level 1 & Level 2)">مسار الأطفال (Level 1 & Level 2)</option>
+                                    <option value="مادة ICT (من 4 ابتدائي إلى 3 إعدادي)">مادة ICT (من 4 ابتدائي إلى 3 إعدادي)</option>
+                                    <option value="مادة البرمجة (أولى وتانية ثانوي)">مادة البرمجة (أولى وتانية ثانوي)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-warning-glow btn-lg fw-bold w-100 rounded-pill mt-3 py-3 fs-6">
+                                <i class="fa-brands fa-whatsapp me-2 fs-5"></i> إرسال الحجز عبر الواتساب
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">
+                        <i class="fa-solid fa-code text-warning me-2"></i>
+                        Eng. Hassan Baghdoda
+                    </h5>
+                    <p class="small text-light opacity-75">
+                        أكاديمية متخصصة في تقديم أحدث المناهج البرمجية والتأسيس العملي بأسلوب حضوري مبسط وممتع لكل الفئات العمرية مع المتابعة الفردية الدائمة داخل المقر.
+                    </p>
+                    <div class="mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61586512111019" target="_blank" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/201019472905" target="_blank" class="social-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">روابط سريعة</h5>
+                    <ul class="footer-links small">
+                        <li><a href="#hero"><i class="fa-solid fa-chevron-left text-primary me-2"></i>الصفحة الرئيسية</a></li>
+                        <li><a href="#courses"><i class="fa-solid fa-chevron-left text-primary me-2"></i>المسارات المتاحة</a></li>
+                        <li><a href="#reviews"><i class="fa-solid fa-chevron-left text-primary me-2"></i>آراء الطلاب</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-left text-primary me-2"></i>حجز مكان بالمقر</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-title">معلومات المقر والتواصل</h5>
+                    <div class="contact-info-item small">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>المقر الرئيسي المجهز للتدريب الحضوري</span>
+                    </div>
+                    <div class="contact-info-item small">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>واتساب والتواصل: 01019472905</span>
+                    </div>
+                    <div class="contact-info-item small">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>مواعيد العمل: طوال أيام الأسبوع</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-5 opacity-25">
+            <div class="row align-items-center copyright text-center small">
+                <div class="col-12 text-light opacity-50">
+                    جميع الحقوق محفوظة للباشمهندسة أمامه &copy; 2026
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- WhatsApp Script -->
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var phoneNumber = "201019472905";
+            var name = document.getElementById('studentName').value;
+            var phone = document.getElementById('studentPhone').value;
+            var course = document.getElementById('studentCourse').value;
+
+            var message = "السلام عليكم ورحمة الله وبركاته، أرغب في الحجز بالمقر مع الباشمهندس حسن.%0A%0A" +
+                "📌 *الاسم:* " + encodeURIComponent(name) + "%0A" +
+                "📞 *رقم الهاتف:* " + encodeURIComponent(phone) + "%0A" +
+                "📚 *المسار المطلوب:* " + encodeURIComponent(course);
+
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+
+</html>
